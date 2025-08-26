@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Abroad</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes flyOnce {
+            0% {
+                left: -200px;
+                opacity: 1;
+            }
+            80% {
+                opacity: 1;
+            }
+            100% {
+                left: 100%;
+                opacity: 0;
+            }
+            /* disappears at the end */
+        }
+
+        #superhero {
+            animation: flyOnce 5s linear 1 forwards; /* flies once and disappears */
+        }
+
+        /* Modal animations */
+        @keyframes slideUpFade {
+            0% {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideDownFade {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+        }
+
+        .modal-show {
+            animation: slideUpFade 0.4s ease forwards;
+        }
+
+        .modal-hide {
+            animation: slideDownFade 0.3s ease forwards;
+        }
+
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+<img id="superhero" src="neko-cat.gif" alt="Superhero" class="fixed top-10 left-0 w-32"/>
+<nav class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+        <!-- Left side -->
+        <div class="flex items-center space-x-6">
+            <div class="text-xl font-bold">JBR</div>
+            <a href="#" class="bg-yellow-400 text-black px-3 py-1 rounded hover:bg-yellow-500 transition">Home</a>
+            <a href="course.html"
+               class="bg-white text-black px-3 py-1 rounded hover:bg-yellow-500 transition">Courses</a>
+            <a href="teachers.html"
+               class="bg-white text-black px-3 py-1 rounded hover:bg-yellow-500 transition">Tutors & Mentors</a>
+        </div>
+
+        <!-- Right side -->
+        <div class="flex items-center space-x-4">
+            <input
+                    type="text"
+                    placeholder="Search..."
+                    class="w-60 border border-gray-300 rounded-full px-4 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 transition"
+            >
+            <a href="#" class="bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-500 transition">Sign Up</a>
+        </div>
+    </div>
+</nav>
+
+<script>
+    const btn = document.getElementById('coursesBtn');
+    const dropdown = document.getElementById('coursesDropdown');
+
+    btn.addEventListener('click', () => {
+        dropdown.classList.toggle('hidden');
+    });
+
+    // Close if clicked outside
+    document.addEventListener('click', (e) => {
+        if (!btn.contains(e.target) && !dropdown.contains(e.target)) {
+            dropdown.classList.add('hidden');
+        }
+    });
+</script>
+
+<!-- Hero -->
+<section class="bg-gradient-to-r from-gray-800 to-gray-700 text-white text-center py-20">
+    <h1 class="text-4xl font-bold mb-4" data-aos="fade-up">Want to study abroad?</h1>
+    <p class="text-lg mb-6" data-aos="fade-up" data-aos-delay="200">Not sure where to begin?</p>
+    <a href="teachers.html#t_uni">
+    <button class="bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold"
+            data-aos="fade-up" data-aos-delay="300">
+        Contact a Mentor
+    </button>
+    </a>
+</section>
+
+
+<!-- Learn More About Courses -->
+<section class="bg-gray-100 py-16">
+    <h2 class="text-3xl font-bold text-center mb-12">Learn More About Services</h2>
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+
+        <!-- AP/IB/A-Level -->
+        <div class="bg-gray-50 p-8 rounded-lg shadow-md flex flex-col justify-between shadow-md flex flex-col justify-between
+            hover:bg-gray-100 hover:shadow-lg hover:-translate-y-1 transition-transform duration-300 ">
+            <div>
+                <h3 class="text-2xl font-semibold mb-2">AP / IB / A-Level & Olympiads</h3>
+                <p class="mb-4">blabla</p>
+            </div>
+            <div class="flex justify-center">
+                <a href="course.html">
+                    <button class="bg-yellow-400 text-black px-20 py-2 rounded">
+                        Start the Course
+                    </button>
+                </a>
+            </div>
+
+
+        </div>
+
+        <div class="bg-gray-50 p-8 rounded-lg shadow-md flex flex-col justify-between shadow-md flex flex-col justify-between
+            hover:bg-gray-100 hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
+            <div>
+                <h3 class="text-2xl font-semibold mb-2">University Consulting</h3>
+                <p class="mb-4">blabla</p>
+            </div>
+            <div class="flex justify-center">
+                <a href="teachers.html">
+                    <button class="bg-yellow-400 text-black px-20 py-2 rounded">
+                        Start the Course
+                    </button>
+                </a>
+            </div>
+        </div>
+
+        <!-- English & Math -->
+        <div class="bg-gray-50 p-8 rounded-lg shadow-md flex flex-col justify-between shadow-md flex flex-col justify-between
+            hover:bg-gray-100 hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
+            <div>
+                <h3 class="text-2xl font-semibold mb-2">English & Math Certification</h3>
+                <p class="mb-4">Prepare for IELTS, SAT, TOEFL and more.</p>
+            </div>
+            <div class="flex justify-center">
+                <a href="course.html#english">
+                    <button class="bg-yellow-400 text-black px-20 py-2 rounded">
+                        Start the Course
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Detailed Courses -->
+<section class="bg-gray-900 text-white py-20">
+    <h2 class="text-3xl font-bold text-center mb-12">Detailed Courses</h2>
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 px-1">
+
+        <!-- AP/IB/A-Level subjects -->
+        <div>
+            <h3 class="text-xl font-semibold mb-6 text-center">AP / IB / A-Level</h3>
+            <div class="grid grid-cols-1 gap-6">
+                <div class="bg-gray-800 w-full min-w-[220px] p-6 rounded-lg flex justify-between items-center hover:bg-gray-700 hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
+                    <span>Chemistry</span>
+                    <a href="course.html#chemistry">
+                    <button class="bg-yellow-400 text-black px-4 py-2 rounded">Go to Course</button>
+                    </a>
+                </div>
+                <div class="bg-gray-800 w-full min-w-[220px] p-6 rounded-lg flex justify-between items-center hover:bg-gray-700 hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
+                    <span>Physics</span>
+                    <a href="course.html#physics">
+                    <button class="bg-yellow-400 text-black px-4 py-2 rounded">Go to Course</button>
+                    </a>
+                </div>
+                <div class="bg-gray-800 w-full min-w-[220px] p-6 rounded-lg flex justify-between items-center hover:bg-gray-700 hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
+                    <span>Biology</span>
+                    <a href="course.html#biology">
+                        <button class="bg-yellow-400 text-black px-4 py-2 rounded">Go to Course</button>
+                    </a>
+                </div>
+                <div class="bg-gray-800 w-full min-w-[220px] p-6 rounded-lg flex justify-between items-center hover:bg-gray-700 hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
+                    <span>Calculus</span>
+                    <a href="course.html#math">
+                        <button class="bg-yellow-400 text-black px-4 py-2 rounded">Go to Course</button>
+                    </a>
+                </div>
+                <div class="bg-gray-800 w-full min-w-[220px] p-6 rounded-lg flex justify-between items-center hover:bg-gray-700 hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
+                    <span>Statistics</span>
+                    <a href="course.html#math">
+                        <button class="bg-yellow-400 text-black px-4 py-2 rounded">Go to Course</button>
+                    </a>
+                </div>
+                <div class="bg-gray-800 w-full min-w-[220px] p-6 rounded-lg flex justify-between items-center hover:bg-gray-700 hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
+                    <span>Computer Science</span>
+                    <a href="course.html#cs">
+                        <button class="bg-yellow-400 text-black px-4 py-2 rounded">Go to Course</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- RFO subjects -->
+        <div>
+            <h3 class="text-xl font-semibold mb-6 text-center">RFO</h3>
+            <div class="grid grid-cols-1 gap-6">
+                <div class="bg-gray-800 w-full min-w-[220px] p-6 rounded-lg flex justify-between items-center hover:bg-gray-700 hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
+                    <span>Chemistry</span>
+                    <a href="course.html#chemistry">
+                        <button class="bg-yellow-400 text-black px-4 py-2 rounded">Go to Course</button>
+                    </a>
+                </div>
+                <div class="bg-gray-800 w-full min-w-[220px] p-6 rounded-lg flex justify-between items-center hover:bg-gray-700 hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
+                    <span>Physics</span>
+                    <a href="course.html#physics">
+                        <button class="bg-yellow-400 text-black px-4 py-2 rounded">Go to Course</button>
+                    </a>
+                </div>
+                <div class="bg-gray-800 w-full min-w-[220px] p-6 rounded-lg flex justify-between items-center hover:bg-gray-700 hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
+                    <span>Biology</span>
+                    <a href="course.html#biology">
+                        <button class="bg-yellow-400 text-black px-4 py-2 rounded">Go to Course</button>
+                    </a>
+                </div>
+                <div class="bg-gray-800 w-full min-w-[220px] p-6 rounded-lg flex justify-between items-center hover:bg-gray-700 hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
+                    <span>Mathematics</span>
+                    <a href="course.html#math">
+                        <button class="bg-yellow-400 text-black px-4 py-2 rounded">Go to Course</button>
+                    </a>
+                </div>
+                <div class="bg-gray-800 w-full min-w-[220px] p-6 rounded-lg flex justify-between items-center hover:bg-gray-700 hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
+                    <span>Informatics</span>
+                    <a href="course.html#cs">
+                        <button class="bg-yellow-400 text-black px-4 py-2 rounded">Go to Course</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- English & Math subjects -->
+        <div>
+            <h3 class="text-xl font-semibold mb-6 text-center">English & Math</h3>
+            <div class="grid grid-cols-1 gap-6">
+                <div class="bg-gray-800 w-full min-w-[220px] p-6 rounded-lg flex justify-between items-center hover:bg-gray-700 hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
+                    <span>SAT Math</span>
+                    <a href="course.html#english">
+                        <button class="bg-yellow-400 text-black px-4 py-2 rounded">Go to Course</button>
+                    </a>
+                </div>
+                <div class="bg-gray-800 w-full min-w-[220px] p-6 rounded-lg flex justify-between items-center hover:bg-gray-700 hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
+                    <span>SAT English</span>
+                    <a href="course.html#english">
+                        <button class="bg-yellow-400 text-black px-4 py-2 rounded">Go to Course</button>
+                    </a>
+                </div>
+                <div class="bg-gray-800 w-full min-w-[220px] p-6 rounded-lg flex justify-between items-center hover:bg-gray-700 hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
+                    <span>IELTS Reading</span>
+                    <a href="course.html#english">
+                        <button class="bg-yellow-400 text-black px-4 py-2 rounded">Go to Course</button>
+                    </a>
+                </div>
+                <div class="bg-gray-800 w-full min-w-[220px] p-6 rounded-lg flex justify-between items-center hover:bg-gray-700 hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
+                    <span>IELTS Listening</span>
+                    <a href="course.html#english">
+                        <button class="bg-yellow-400 text-black px-4 py-2 rounded">Go to Course</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- Testimonials Section -->
+<section class="bg-gray-100 py-20">
+    <h2 class="text-3xl font-bold text-center mb-12">What Our Students Say</h2>
+
+    <div class="max-w-6xl mx-auto relative flex items-center">
+
+        <!-- Left arrow -->
+        <button id="prev" class="absolute left-[-20px] z-10 bg-gray-200 rounded-full p-3 hover:bg-gray-300 text-xl">
+            &#8592;
+        </button>
+
+        <!-- Testimonials container -->
+        <div id="testimonial-container" class="flex gap-8 overflow-hidden w-full">
+            <!-- Card 1 -->
+            <div class="bg-white p-6 rounded-xl flex-none w-[calc(50%-16px)] flex flex-col items-center text-center">
+                <img src="student1.jpg" alt="Student 1" class="w-24 h-24 rounded-full mb-4">
+                <h3 class="font-semibold text-lg mb-2">Jabir</h3>
+                <p class="text-gray-600">Thanks to Study Abroad, I prepared for my exams efficiently and got selected
+                    for my dream university.</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white p-6 rounded-xl flex-none w-[calc(50%-16px)] flex flex-col items-center text-center">
+                <img src="student2.jpg" alt="Student 2" class="w-24 h-24 rounded-full mb-4">
+                <h3 class="font-semibold text-lg mb-2">Aysel</h3>
+                <p class="text-gray-600">The mentors guided me through every step, making international study seem
+                    achievable and fun.</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white p-6 rounded-xl shadow-lg flex-none w-[calc(50%-16px)] flex flex-col items-center text-center">
+                <img src="student3.jpg" alt="Student 3" class="w-24 h-24 rounded-full mb-4">
+                <h3 class="font-semibold text-lg mb-2">Elvin</h3>
+                <p class="text-gray-600">I gained confidence and skills that helped me excel in international exams and
+                    interviews.</p>
+            </div>
+        </div>
+
+        <!-- Right arrow -->
+        <button id="next" class="absolute right-[-20px] z-10 bg-gray-200 rounded-full p-3 hover:bg-gray-300 text-xl">
+            &#8594;
+        </button>
+    </div>
+</section>
+<script>
+    const container = document.getElementById('testimonial-container');
+    const prev = document.getElementById('prev');
+    const next = document.getElementById('next');
+
+    let scrollIndex = 0;
+    const visibleCards = 2; // number of cards visible at once
+    const gap = 32; // Tailwind gap-8
+    const cardWidth = container.children[0].offsetWidth + 32;
+
+    next.addEventListener('click', () => {
+        scrollIndex++;
+        if (scrollIndex > container.children.length - visibleCards) {
+            scrollIndex = 0; // loop back to first
+        }
+        container.scrollTo({left: scrollIndex * cardWidth, behavior: 'smooth'});
+    });
+
+    prev.addEventListener('click', () => {
+        scrollIndex--;
+        if (scrollIndex < 0) {
+            scrollIndex = container.children.length - visibleCards; // loop to last set
+        }
+        container.scrollTo({left: scrollIndex * cardWidth, behavior: 'smooth'});
+    });
+</script>
+<!-- Our Tutors Slider Section -->
+<section class="bg-gray-900 py-20">
+    <h2 class="text-3xl font-bold text-center mb-12 text-gray-100">Meet Our Tutors</h2>
+
+    <div class="max-w-6xl mx-auto relative flex items-center">
+
+        <!-- Left arrow -->
+        <button id="tutor-prev"
+                class="absolute left-[-20px] z-10 bg-gray-200 rounded-full p-3 hover:bg-gray-300 text-xl">
+            &#8592;
+        </button>
+
+        <!-- Tutors container -->
+        <div id="tutor-container" class="flex gap-8 overflow-hidden w-full rounded-xl">
+
+            <!-- Tutor Card 1 -->
+            <div class="bg-gray-800 p-6 rounded-lg flex-none w-[calc(33.333%-16px)] flex flex-col items-center text-center">
+                <img src="tutor1.png" alt="Tutor 1" class="w-32 h-32 rounded-full mb-4">
+                <h3 class="font-semibold text-lg mb-1 text-gray-50">Mr. Nariman</h3>
+                <p class="text-gray-50 mb-2">AP Chemistry & Physics Mentor</p>
+                <a href="#"
+                   class="bg-yellow-400 text-black px-3 py-1 rounded tutor-btn"
+                   data-name="Mr. Nariman"
+                   data-subjects="AP Chemistry & Physics"
+                   data-img="tutor1.png"
+                   data-bio="Dr. Aysel is an experienced mentor helping students excel in AP Chemistry and Physics. Loves interactive learning and chemistry experiments.">
+                    View Profile
+                </a>
+            </div>
+
+            <!-- Tutor Card 2 -->
+            <div class="bg-gray-800 p-6 rounded-lg flex-none w-[calc(33.333%-16px)] flex flex-col items-center text-center">
+                <img src="tutor1.png" alt="Tutor 1" class="w-32 h-32 rounded-full mb-4">
+                <h3 class="font-semibold text-lg mb-1 text-gray-50">Mr. Nariman</h3>
+                <p class="text-gray-50 mb-2">AP Chemistry & Physics Mentor</p>
+                <a href="#"
+                   class="bg-yellow-400 text-black px-3 py-1 rounded tutor-btn"
+                   data-name="Mr. Nariman"
+                   data-subjects="AP Chemistry & Physics"
+                   data-img="tutor1.png"
+                   data-bio="Dr. Aysel is an experienced mentor helping students excel in AP Chemistry and Physics. Loves interactive learning and chemistry experiments.">
+                    View Profile
+                </a>
+            </div>
+
+            <!-- Tutor Card 3 -->
+            <div class="bg-gray-800 p-6 rounded-lg flex-none w-[calc(33.333%-16px)] flex flex-col items-center text-center">
+                <img src="tutor1.png" alt="Tutor 1" class="w-32 h-32 rounded-full mb-4">
+                <h3 class="font-semibold text-lg mb-1 text-gray-50">Mr. Nariman</h3>
+                <p class="text-gray-50 mb-2">AP Chemistry & Physics Mentor</p>
+                <a href="#"
+                   class="bg-yellow-400 text-black px-3 py-1 rounded tutor-btn"
+                   data-name="Mr. Nariman"
+                   data-subjects="AP Chemistry & Physics"
+                   data-img="tutor1.png"
+                   data-bio="Dr. Aysel is an experienced mentor helping students excel in AP Chemistry and Physics. Loves interactive learning and chemistry experiments.">
+                    View Profile
+                </a>
+            </div>
+
+            <!-- Tutor Card 4 -->
+            <div class="bg-gray-800 p-6 rounded-lg flex-none w-[calc(33.333%-16px)] flex flex-col items-center text-center">
+                <img src="tutor1.png" alt="Tutor 1" class="w-32 h-32 rounded-full mb-4">
+                <h3 class="font-semibold text-lg mb-1 text-gray-50">Mr. Nariman</h3>
+                <p class="text-gray-50 mb-2">AP Chemistry & Physics Mentor</p>
+                <a href="#"
+                   class="bg-yellow-400 text-black px-3 py-1 rounded tutor-btn"
+                   data-name="Mr. Nariman"
+                   data-subjects="AP Chemistry & Physics"
+                   data-img="tutor1.png"
+                   data-bio="Dr. Aysel is an experienced mentor helping students excel in AP Chemistry and Physics. Loves interactive learning and chemistry experiments.">
+                    View Profile
+                </a>
+            </div>
+
+            <!-- Tutor Card 5 -->
+            <div class="bg-gray-800 p-6 rounded-lg flex-none w-[calc(33.333%-16px)] flex flex-col items-center text-center">
+                <img src="tutor1.png" alt="Tutor 1" class="w-32 h-32 rounded-full mb-4">
+                <h3 class="font-semibold text-lg mb-1 text-gray-50">Mr. Nariman</h3>
+                <p class="text-gray-50 mb-2">AP Chemistry & Physics Mentor</p>
+                <a href="#"
+                   class="bg-yellow-400 text-black px-3 py-1 rounded tutor-btn"
+                   data-name="Mr. Nariman"
+                   data-subjects="AP Chemistry & Physics"
+                   data-img="tutor1.png"
+                   data-bio="Dr. Aysel is an experienced mentor helping students excel in AP Chemistry and Physics. Loves interactive learning and chemistry experiments.">
+                    View Profile
+                </a>
+            </div>
+
+            <!-- Tutor Card 6 -->
+            <div class="bg-gray-800 p-6 rounded-lg flex-none w-[calc(33.333%-16px)] flex flex-col items-center text-center">
+                <img src="tutor1.png" alt="Tutor 1" class="w-32 h-32 rounded-full mb-4">
+                <h3 class="font-semibold text-lg mb-1 text-gray-50">Mr. Nariman</h3>
+                <p class="text-gray-50 mb-2">AP Chemistry & Physics Mentor</p>
+                <a href="#"
+                   class="bg-yellow-400 text-black px-3 py-1 rounded tutor-btn"
+                   data-name="Mr. Nariman"
+                   data-subjects="AP Chemistry & Physics"
+                   data-img="tutor1.png"
+                   data-bio="Dr. Aysel is an experienced mentor helping students excel in AP Chemistry and Physics. Loves interactive learning and chemistry experiments.">
+                    View Profile
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Right arrow -->
+        <button id="tutor-next"
+                class="absolute right-[-20px] z-10 bg-gray-200 rounded-full p-3 hover:bg-gray-300 text-xl">
+            &#8594;
+        </button>
+    </div>
+</section>
+
+<script>
+    const tutorContainer = document.getElementById('tutor-container');
+    const tutorPrev = document.getElementById('tutor-prev');
+    const tutorNext = document.getElementById('tutor-next');
+
+    let tutorIndex = 0;
+    const visibleTutors = 3;
+
+    function scrollTutors() {
+        const gap = parseInt(getComputedStyle(tutorContainer).gap); // get actual gap
+        const cardWidth = tutorContainer.children[0].getBoundingClientRect().width;
+        const scrollAmount = (cardWidth + gap) * tutorIndex;
+        tutorContainer.scrollTo({left: scrollAmount, behavior: 'smooth'});
+    }
+
+    tutorNext.addEventListener('click', () => {
+        tutorIndex++;
+        if (tutorIndex > tutorContainer.children.length - visibleTutors) tutorIndex = 0;
+        scrollTutors();
+    });
+
+    tutorPrev.addEventListener('click', () => {
+        tutorIndex--;
+        if (tutorIndex < 0) tutorIndex = tutorContainer.children.length - visibleTutors;
+        scrollTutors();
+    });
+
+    // Recalculate on window resize
+    window.addEventListener('resize', () => {
+        scrollTutors();
+    });
+</script>
+
+<!-- News & Updates Section -->
+<section class="bg-gray-100 py-20">
+    <h2 class="text-3xl font-bold text-center mb-12">News & Updates</h2>
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+
+        <!-- News Card 1 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+            <img src="news1.jpg" alt="News 1" class="w-full h-40 object-cover">
+            <div class="p-6 flex flex-col justify-between flex-1">
+                <h3 class="text-xl font-semibold mb-2">New Course Launch</h3>
+                <p class="text-gray-600 mb-4">We just launched an advanced AP Chemistry course for students aiming for
+                    top scores.</p>
+                <a href="#" class="mt-auto bg-yellow-400 text-black px-4 py-2 rounded text-center">Read More</a>
+            </div>
+        </div>
+
+        <!-- News Card 2 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+            <img src="news2.jpg" alt="News 2" class="w-full h-40 object-cover">
+            <div class="p-6 flex flex-col justify-between flex-1">
+                <h3 class="text-xl font-semibold mb-2">Mentor Spotlight</h3>
+                <p class="text-gray-600 mb-4">Meet our mentor of the month who helped over 50 students achieve their
+                    study abroad goals.</p>
+                <a href="#" class="mt-auto bg-yellow-400 text-black px-4 py-2 rounded text-center">Read More</a>
+            </div>
+        </div>
+
+        <!-- News Card 3 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+            <img src="news3.jpg" alt="News 3" class="w-full h-40 object-cover">
+            <div class="p-6 flex flex-col justify-between flex-1">
+                <h3 class="text-xl font-semibold mb-2">Upcoming Webinar</h3>
+                <p class="text-gray-600 mb-4">Join our free webinar on “Preparing for IELTS efficiently” this Friday at
+                    5 PM.</p>
+                <a href="#" class="mt-auto bg-yellow-400 text-black px-4 py-2 rounded text-center">Read More</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+<footer class="bg-gray-700 text-gray-300 py-10 ">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- About -->
+        <div>
+            <h3 class="text-lg font-semibold mb-4">About Us</h3>
+            <p class="text-sm">
+                Study Abroad helps students access courses, tutors, and education resources
+                for success in exams and international opportunities.
+            </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2 text-sm">
+                <li><a href="#" class="hover:text-yellow-400">Home</a></li>
+                <li><a href="#" class="hover:text-yellow-400">Courses</a></li>
+                <li><a href="#" class="hover:text-yellow-400">Tutors</a></li>
+                <li><a href="#" class="hover:text-yellow-400">Education Abroad</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+            <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+            <p class="text-sm mb-2">📧 Email: <a href="mailto:info@studyabroad.com" class="hover:text-yellow-400">info@studyabroad.com</a>
+            </p>
+            <p class="text-sm mb-2">📞 Phone: +994 50 123 45 67</p>
+            <p class="text-sm mb-2">📍 Location: Baku, Azerbaijan</p>
+            <div class="flex space-x-4 mt-4 justify-center md:justify-start">
+                <a href="#" class="hover:text-yellow-400">🔗</a>
+                <a href="#" class="hover:text-yellow-400">🐦</a>
+                <a href="#" class="hover:text-yellow-400">📘</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom -->
+    <div class="mt-10 border-t border-gray-700 pt-4 text-center text-sm">
+        © 2025 Study Abroad. All rights reserved.
+    </div>
+</footer>
+<script>
+    AOS.init({
+        duration: 2000, // animation duration in ms
+        once: true,    // animation only happens once per element
+    });
+</script>
+<!-- Tutor Modal -->
+<div id="tutorModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+    <div id="tutorModalContent"
+         class="bg-gray-900 text-white rounded-xl p-10 w-11/12 max-w-3xl relative shadow-2xl transition-container">
+        <button id="closeTutorModal" class="absolute top-4 right-4 text-3xl font-bold hover:text-yellow-400">&times;
+        </button>
+        <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+            <img id="tutorModalImg" src="" alt="Tutor" class="w-48 h-48 rounded-full object-cover shadow-lg">
+            <div class="flex-1">
+                <h2 id="tutorModalName" class="text-3xl font-bold mb-2">Tutor Name</h2>
+                <p class="text-yellow-400 font-semibold mb-2" id="tutorModalSubjects">Subjects Taught</p>
+                <p class="mb-1"><strong>Age:</strong> <span id="tutorModalAge">30</span></p>
+                <p class="mb-1"><strong>Experience:</strong> <span id="tutorModalExperience">5 years</span></p>
+                <p class="mb-4 text-gray-300" id="tutorModalBio">Tutor bio goes here.</p>
+                <button class="bg-yellow-400 text-black px-6 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition">
+                    Contact Tutor
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const tutorModal = document.getElementById('tutorModal');
+    const tutorModalContent = document.getElementById('tutorModalContent');
+    const closeTutorModal = document.getElementById('closeTutorModal');
+    const tutorBtns = document.querySelectorAll('.tutor-btn');
+
+    const tutorModalImg = document.getElementById('tutorModalImg');
+    const tutorModalName = document.getElementById('tutorModalName');
+    const tutorModalSubjects = document.getElementById('tutorModalSubjects');
+    const tutorModalAge = document.getElementById('tutorModalAge');
+    const tutorModalExperience = document.getElementById('tutorModalExperience');
+    const tutorModalBio = document.getElementById('tutorModalBio');
+
+    function openModal(btn) {
+        tutorModalImg.src = btn.dataset.img;
+        tutorModalName.textContent = btn.dataset.name;
+        tutorModalSubjects.textContent = btn.dataset.subjects;
+        tutorModalAge.textContent = btn.dataset.age;
+        tutorModalExperience.textContent = btn.dataset.experience;
+        tutorModalBio.textContent = btn.dataset.bio;
+
+        tutorModal.classList.remove('hidden');
+        tutorModalContent.classList.remove('modal-hide');
+        tutorModalContent.classList.add('modal-show');
+    }
+
+    function closeModal() {
+        tutorModalContent.classList.remove('modal-show');
+        tutorModalContent.classList.add('modal-hide');
+
+        // Wait for animation to finish
+        tutorModalContent.addEventListener('animationend', () => {
+            tutorModal.classList.add('hidden');
+        }, {once: true});
+    }
+
+    // Open modal
+    tutorBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openModal(btn);
+        });
+    });
+
+    // Close modal
+    closeTutorModal.addEventListener('click', closeModal);
+
+    // Close if clicking outside
+    tutorModal.addEventListener('click', (e) => {
+        if (e.target === tutorModal) closeModal();
+    });
+</script>
+
+
+</body>
+</html>
