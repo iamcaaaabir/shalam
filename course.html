@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding-top: 6rem; /* space from navbar */
+        }
+
+        .section-title {
+            border-bottom: 4px solid;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+<!-- Main Navbar -->
+<nav class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+        <!-- Left side -->
+        <div class="flex items-center space-x-6">
+            <div class="text-xl font-bold">JBR</div>
+            <a href="index.html" class="bg-white text-black px-3 py-1 rounded hover:bg-yellow-500 transition">Home</a>
+            <a href="course.html" class="bg-yellow-400 text-black px-3 py-1 rounded">Courses</a>
+            <a href="teachers.html" class="bg-white text-black px-3 py-1 rounded hover:bg-yellow-500 transition">Tutors &
+                Mentors</a>
+        </div>
+
+        <!-- Right side -->
+        <div class="flex items-center space-x-4">
+            <input
+                    type="text"
+                    placeholder="Search..."
+                    class="w-60 border border-gray-300 rounded-full px-4 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 transition"
+            >
+            <a href="signup.html" class="bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-500 transition">Sign
+                Up</a>
+        </div>
+    </div>
+</nav>
+<!-- Sub Navbar -->
+<nav class="bg-gray-100 shadow-sm sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex space-x-6 justify-center">
+        <a href="#chemistry" class="hover:text-yellow-500 transition">Chemistry</a>
+        <a href="#physics" class="hover:text-yellow-500 transition">Physics</a>
+        <a href="#math" class="hover:text-yellow-500 transition">Math & Statistics</a>
+        <a href="#cs" class="hover:text-yellow-500 transition">Computer Science</a>
+        <a href="#biology" class="hover:text-yellow-500 transition">Biology</a>
+        <a href="#english" class="hover:text-yellow-500 transition">English</a>
+    </div>
+</nav>
+
+<!-- Chemistry Section -->
+<section id="chemistry" class="py-20 px-6 bg-red-50">
+    <h2 class="text-4xl font-bold text-center section-title border-red-400 mb-12">Chemistry</h2>
+
+    <div class="max-w-6xl mx-auto flex flex-row gap-20 justify-between items-start">
+
+        <!-- Column 1: RFO / Olympiad -->
+        <div class="w-[300px] md:pl-4">
+            <h3 class="text-2xl font-semibold mb-4 text-center">RFO / Olympiad</h3>
+            <ul class="list-inside space-y-5">
+                <li>
+                    <button class="w-full text-center toggle-sub font-medium">Organic Chemistry ▸</button>
+                    <ul class="overflow-scroll max-h-0 transition-all duration-500 pl-4 space-y-1 text-center">
+                        <li>Notes</li>
+                        <li>Problem Sets</li>
+                        <li>YouTube Channels</li>
+                    </ul>
+                </li>
+                <li>
+                    <button class="w-full text-center toggle-sub font-medium">Inorganic Chemistry ▸</button>
+                    <ul class="overflow-scroll max-h-0 transition-all duration-500 pl-4 space-y-1 text-center">
+                        <li>Guide</li>
+                        <li>Extra Problems</li>
+                    </ul>
+                </li>
+                <li>
+                    <button class="w-full text-center toggle-sub font-medium">Physical Chemistry ▸</button>
+                    <ul class="overflow-scroll max-h-0 transition-all duration-500 pl-4 space-y-1 text-center">
+                        <li>Book A</li>
+                        <li>Book B</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Column 2: AP / IB / A-Level -->
+        <div class="w-[300px] text-center mx-12">
+            <h3 class="text-2xl font-semibold mb-4">AP / IB / A-Level</h3>
+            <ul class="list-inside space-y-5">
+                <li>
+                    <button class="w-full text-center toggle-sub font-medium">Organic Chemistry Problems ▸</button>
+                    <ul class="overflow-scroll max-h-0 transition-all duration-500 pl-4 space-y-1">
+                        <li>Book 1</li>
+                        <li>Book 2</li>
+                        <li>YouTube Playlist</li>
+                    </ul>
+                </li>
+                <li>
+                    <button class="w-full text-center toggle-sub font-medium">Inorganic Chemistry Problems ▸</button>
+                    <ul class="overflow-scroll max-h-0 transition-all duration-500 pl-4 space-y-1">
+                        <li>Book A</li>
+                        <li>Book B</li>
+                    </ul>
+                </li>
+                <li>
+                    <button class="w-full text-center toggle-sub font-medium">Physical Chemistry Problems ▸</button>
+                    <ul class="overflow-scroll max-h-0 transition-all duration-500 pl-4 space-y-1">
+                        <li>Problem Set 1</li>
+                        <li>Problem Set 2</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Column 3: Extra Resources -->
+        <div class="w-[300px] text-center">
+            <h3 class="text-2xl font-semibold mb-4">Extra Resources</h3>
+            <ul class="list-inside space-y-5">
+                <li><a href="#" class="text-red-600 hover:underline">Reference Book A</a></li>
+                <li><a href="#" class="text-red-600 hover:underline">Reference Book B</a></li>
+                <li><a href="#" class="text-red-600 hover:underline">Online Videos</a></li>
+                <li><a href="#" class="text-red-600 hover:underline">Practice Problems</a></li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+<!-- Physics Section -->
+<section id="physics" class="py-20 px-6 bg-blue-50">
+    <h2 class="text-4xl font-bold text-center section-title border-blue-400 mb-12">Physics</h2>
+
+    <div class="max-w-6xl mx-auto flex flex-row gap-20 justify-between items-start">
+
+        <!-- Column 1: RFO / Olympiad -->
+        <div class="w-[300px] md:pl-4">
+            <h3 class="text-2xl font-semibold mb-4 text-center">RFO / Olympiad</h3>
+            <ul class="list-inside space-y-5">
+                <li>
+                    <button class="w-full text-center toggle-sub font-medium">Mechanics ▸</button>
+                    <ul class="overflow-scroll max-h-0 transition-all duration-500 pl-4 space-y-1 text-center">
+                        <li>Notes</li>
+                        <li>Problem Sets</li>
+                        <li>Video Tutorials</li>
+                    </ul>
+                </li>
+                <li>
+                    <button class="w-full text-center toggle-sub font-medium">Electrodynamics ▸</button>
+                    <ul class="overflow-scroll max-h-0 transition-all duration-500 pl-4 space-y-1 text-center">
+                        <li>Notes</li>
+                        <li>Practice Problems</li>
+                    </ul>
+                </li>
+                <li>
+                    <button class="w-full text-center toggle-sub font-medium">Thermodynamics ▸</button>
+                    <ul class="overflow-scroll max-h-0 transition-all duration-500 pl-4 space-y-1 text-center">
+                        <li>Book References</li>
+                        <li>Extra Problems</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Column 2: AP / IB / A-Level -->
+        <div class="w-[300px] text-center mx-12">
+            <h3 class="text-2xl font-semibold mb-4">AP / IB / A-Level</h3>
+            <ul class="list-inside space-y-5">
+                <li>
+                    <button class="w-full text-center toggle-sub font-medium">Mechanics Problems ▸</button>
+                    <ul class="overflow-scroll max-h-0 transition-all duration-500 pl-4 space-y-1">
+                        <li>Book 1</li>
+                        <li>Book 2</li>
+                        <li>Video Playlist</li>
+                    </ul>
+                </li>
+                <li>
+                    <button class="w-full text-center toggle-sub font-medium">Electrodynamics Problems ▸</button>
+                    <ul class="overflow-scroll max-h-0 transition-all duration-500 pl-4 space-y-1">
+                        <li>Book A</li>
+                        <li>Book B</li>
+                    </ul>
+                </li>
+                <li>
+                    <button class="w-full text-center toggle-sub font-medium">Thermodynamics Problems ▸</button>
+                    <ul class="overflow-scroll max-h-0 transition-all duration-500 pl-4 space-y-1">
+                        <li>Problem Set 1</li>
+                        <li>Problem Set 2</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Column 3: Extra Resources -->
+        <div class="w-[300px] text-center">
+            <h3 class="text-2xl font-semibold mb-4">Extra Resources</h3>
+            <ul class="list-inside space-y-5">
+                <li><a href="#" class="text-blue-600 hover:underline">Reference Book A</a></li>
+                <li><a href="#" class="text-blue-600 hover:underline">Reference Book B</a></li>
+                <li><a href="#" class="text-blue-600 hover:underline">Video Lectures</a></li>
+                <li><a href="#" class="text-blue-600 hover:underline">Practice Problems</a></li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- Math & Statistics Section -->
+<section id="math" class="py-20 px-6 bg-green-50">
+    <h2 class="text-4xl font-bold text-center section-title border-green-400 mb-12">Math & Statistics</h2>
+
+    <div class="max-w-6xl mx-auto flex flex-row gap-20 justify-between items-start">
+
+        <!-- Column 1: RFO / Olympiad -->
+        <div class="w-[300px] md:pl-4">
+            <h3 class="text-2xl font-semibold mb-4 text-center">RFO / Olympiad</h3>
+            <ul class="list-inside space-y-5">
+                <li>
+                    <button class="w-full text-center toggle-sub font-medium">Algebra ▸</button>
+                    <ul class="overflow-scroll max-h-0 transition-all duration-500 pl-4 space-y-1 text-center">
+                        <li>Notes</li>
+                        <li>Problem Sets</li>
+                        <li>Past Olympiad Questions</li>
+                    </ul>
+                </li>
+                <li>
+                    <button class="w-full text-center toggle-sub font-medium">Geometry ▸</button>
+                    <ul class="overflow-scroll max-h-0 transition-all duration-500 pl-4 space-y-1 text-center">
+                        <li>Notes</li>
+                        <li>Problem Sets</li>
+                    </ul>
+                </li>
+                <li>
+                    <button class="w-full text-center toggle-sub font-medium">Combinatorics ▸</button>
+                    <ul class="overflow-scroll max-h-0 transition-all duration-500 pl-4 space-y-1 text-center">
+                        <li>Book References</li>
+                        <li>Practice Problems</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Column 2: AP / IB / A-Level -->
+        <div class="w-[300px] text-center mx-12">
+            <h3 class="text-2xl font-semibold mb-4">AP / IB / A-Level</h3>
+            <ul class="list-inside space-y-5">
+                <li>
+                    <button class="w-full text-center toggle-sub font-medium">Calculus Problems ▸</button>
+                    <ul class="overflow-scroll max-h-0 transition-all duration-500 pl-4 space-y-1">
+                        <li>Book 1</li>
+                        <li>Book 2</li>
+                        <li>Practice Sets</li>
+                    </ul>
+                </li>
+                <li>
+                    <button class="w-full text-center toggle-sub font-medium">Statistics Problems ▸</button>
+                    <ul class="overflow-scroll max-h-0 transition-all duration-500 pl-4 space-y-1">
+                        <li>Book A</li>
+                        <li>Book B</li>
+                    </ul>
+                </li>
+                <li>
+                    <button class="w-full text-center toggle-sub font-medium">IB Math Problems ▸</button>
+                    <ul class="overflow-scroll max-h-0 transition-all duration-500 pl-4 space-y-1">
+                        <li>Problem Set 1</li>
+                        <li>Problem Set 2</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Column 3: Extra Resources -->
+        <div class="w-[300px] text-center">
+            <h3 class="text-2xl font-semibold mb-4">Extra Resources</h3>
+            <ul class="list-inside space-y-5">
+                <li><a href="#" class="text-green-600 hover:underline">Reference Book A</a></li>
+                <li><a href="#" class="text-green-600 hover:underline">Reference Book B</a></li>
+                <li><a href="#" class="text-green-600 hover:underline">Video Lectures</a></li>
+                <li><a href="#" class="text-green-600 hover:underline">Practice Problems</a></li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- Computer Science Section -->
+<section id="cs" class="py-20 px-6 bg-yellow-50">
+    <h2 class="text-4xl font-bold text-center section-title border-yellow-400 mb-12">Computer Science</h2>
+
+    <div class="max-w-6xl mx-auto flex flex-row gap-20 justify-between items-start">
+
+        <!-- Column 1: RFO / Olympiad -->
+        <div class="w-[300px] md:pl-4">
+            <h3 class="text-2xl font-semibold mb-4 text-center">RFO / Olympiad</h3>
+            <ul class="list-inside space-y-5">
+                <li>
+                    <button class="w-full text-center toggle-sub font-medium">Algorithms ▸</button>
+                    <ul class="overflow-scroll max-h-0 transition-all duration-500 pl-4 space-y-1 text-center">
+                        <li>Notes</li>
+                        <li>Problem Sets</li>
+                        <li>Past Olympiad Questions</li>
+                    </ul>
+                </li>
+                <li>
+                    <button class="w-full text-center toggle-sub font-medium">Data Structures ▸</button>
+                    <ul class="overflow-scroll max-h-0 transition-all duration-500 pl-4 space-y-1 text-center">
+                        <li>Notes</li>
+                        <li>Practice Problems</li>
+                    </ul>
+                </li>
+                <li>
+                    <button class="w-full text-center toggle-sub font-medium">Programming Challenges ▸</button>
+                    <ul class="overflow-scroll max-h-0 transition-all duration-500 pl-4 space-y-1 text-center">
+                        <li>Code References</li>
+                        <li>Extra Problems</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Column 2: AP / IB / A-Level -->
+        <div class="w-[300px] text-center mx-12">
+            <h3 class="text-2xl font-semibold mb-4">AP / IB / A-Level</h3>
+            <ul class="list-inside space-y-5">
+                <li>
+                    <button class="w-full text-center toggle-sub font-medium">AP Computer Science A ▸</button>
+                    <ul class="overflow-scroll max-h-0 transition-all duration-500 pl-4 space-y-1">
+                        <li>Book 1</li>
+                        <li>Book 2</li>
+                        <li>Practice Sets</li>
+                    </ul>
+                </li>
+                <li>
+                    <button class="w-full text-center toggle-sub font-medium">IB Computer Science ▸</button>
+                    <ul class="overflow-scroll max-h-0 transition-all duration-500 pl-4 space-y-1">
+                        <li>Book A</li>
+                        <li>Book B</li>
+                    </ul>
+                </li>
+                <li>
+                    <button class="w-full text-center toggle-sub font-medium">A-Level CS ▸</button>
+                    <ul class="overflow-scroll max-h-0 transition-all duration-500 pl-4 space-y-1">
+                        <li>Problem Set 1</li>
+                        <li>Problem Set 2</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Column 3: Extra Resources -->
+        <div class="w-[300px] text-center">
+            <h3 class="text-2xl font-semibold mb-4">Extra Resources</h3>
+            <ul class="list-inside space-y-5">
+                <li><a href="#" class="text-yellow-600 hover:underline">Reference Book A</a></li>
+                <li><a href="#" class="text-yellow-600 hover:underline">Reference Book B</a></li>
+                <li><a href="#" class="text-yellow-600 hover:underline">Video Lectures</a></li>
+                <li><a href="#" class="text-yellow-600 hover:underline">Practice Problems</a></li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- Biology Section -->
+<section id="biology" class="py-20 px-6 bg-pink-50">
+    <h2 class="text-4xl font-bold text-center section-title border-pink-400 mb-12">Biology</h2>
+
+    <div class="max-w-6xl mx-auto flex flex-row gap-20 justify-between items-start">
+
+        <!-- Column 1: RFO / Olympiad -->
+        <div class="w-[300px] md:pl-4">
+            <h3 class="text-2xl font-semibold mb-4 text-center">RFO / Olympiad</h3>
+            <ul class="list-inside space-y-5">
+                <li>
+                    <button class="w-full text-center toggle-sub font-medium">Genetics ▸</button>
+                    <ul class="overflow-scroll max-h-0 transition-all duration-500 pl-4 space-y-1 text-center">
+                        <li>Notes</li>
+                        <li>Problem Sets</li>
+                        <li>Past Olympiad Questions</li>
+                    </ul>
+                </li>
+                <li>
+                    <button class="w-full text-center toggle-sub font-medium">Botany ▸</button>
+                    <ul class="overflow-scroll max-h-0 transition-all duration-500 pl-4 space-y-1 text-center">
+                        <li>Notes</li>
+                        <li>Practice Problems</li>
+                    </ul>
+                </li>
+                <li>
+                    <button class="w-full text-center toggle-sub font-medium">Zoology ▸</button>
+                    <ul class="overflow-scroll max-h-0 transition-all duration-500 pl-4 space-y-1 text-center">
+                        <li>Book References</li>
+                        <li>Extra Problems</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Column 2: AP / IB / A-Level -->
+        <div class="w-[300px] text-center mx-12">
+            <h3 class="text-2xl font-semibold mb-4">AP / IB / A-Level</h3>
+            <ul class="list-inside space-y-5">
+                <li>
+                    <button class="w-full text-center toggle-sub font-medium">AP Biology ▸</button>
+                    <ul class="overflow-scroll max-h-0 transition-all duration-500 pl-4 space-y-1">
+                        <li>Book 1</li>
+                        <li>Book 2</li>
+                        <li>Practice Sets</li>
+                    </ul>
+                </li>
+                <li>
+                    <button class="w-full text-center toggle-sub font-medium">IB Biology ▸</button>
+                    <ul class="overflow-scroll max-h-0 transition-all duration-500 pl-4 space-y-1">
+                        <li>Book A</li>
+                        <li>Book B</li>
+                    </ul>
+                </li>
+                <li>
+                    <button class="w-full text-center toggle-sub font-medium">A-Level Biology ▸</button>
+                    <ul class="overflow-scroll max-h-0 transition-all duration-500 pl-4 space-y-1">
+                        <li>Problem Set 1</li>
+                        <li>Problem Set 2</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Column 3: Extra Resources -->
+        <div class="w-[300px] text-center">
+            <h3 class="text-2xl font-semibold mb-4">Extra Resources</h3>
+            <ul class="list-inside space-y-5">
+                <li><a href="#" class="text-pink-600 hover:underline">Reference Book A</a></li>
+                <li><a href="#" class="text-pink-600 hover:underline">Reference Book B</a></li>
+                <li><a href="#" class="text-pink-600 hover:underline">Video Lectures</a></li>
+                <li><a href="#" class="text-pink-600 hover:underline">Practice Problems</a></li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- English & Math Section -->
+<section id="english" class="py-20 px-6 bg-purple-50">
+    <h2 class="text-4xl font-bold text-center section-title border-purple-400 mb-12">English & Math</h2>
+
+    <div class="max-w-6xl mx-auto flex flex-row gap-20 justify-between items-start">
+
+        <!-- Column 1: IELTS / TOEFL -->
+        <div class="w-[300px] md:pl-4">
+            <h3 class="text-2xl font-semibold mb-4 text-center">IELTS / TOEFL</h3>
+            <ul class="list-inside space-y-5">
+                <li>
+                    <button class="w-full text-center toggle-sub font-medium">English Reading ▸</button>
+                    <ul class="overflow-scroll max-h-0 transition-all duration-500 pl-4 space-y-1 text-center">
+                        <li>Sample Passages</li>
+                        <li>Practice Questions</li>
+                        <li>Tips & Strategies</li>
+                    </ul>
+                </li>
+                <li>
+                    <button class="w-full text-center toggle-sub font-medium">English Listening ▸</button>
+                    <ul class="overflow-scroll max-h-0 transition-all duration-500 pl-4 space-y-1 text-center">
+                        <li>Audio Practice</li>
+                        <li>Comprehension Exercises</li>
+                    </ul>
+                </li>
+                <li>
+                    <button class="w-full text-center toggle-sub font-medium">English Writing ▸</button>
+                    <ul class="overflow-scroll max-h-0 transition-all duration-500 pl-4 space-y-1 text-center">
+                        <li>Sample Essays</li>
+                        <li>Speaking Prompts</li>
+                    </ul>
+                </li>
+                <li>
+                    <button class="w-full text-center toggle-sub font-medium">English Speaking ▸</button>
+                    <ul class="overflow-scroll max-h-0 transition-all duration-500 pl-4 space-y-1 text-center">
+                        <li>Basic Math Exercises</li>
+                        <li>Problem Solving Tips</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Column 2: SAT / ACT -->
+        <div class="w-[300px] text-center mx-12">
+            <h3 class="text-2xl font-semibold mb-4">SAT / ACT</h3>
+            <ul class="list-inside space-y-5">
+                <li>
+                    <button class="w-full text-center toggle-sub font-medium">Reading & Writing ▸</button>
+                    <ul class="overflow-scroll max-h-0 transition-all duration-500 pl-4 space-y-1">
+                        <li>Practice Tests</li>
+                        <li>Sample Questions</li>
+                        <li>Tips & Strategies</li>
+                    </ul>
+                </li>
+                <li>
+                    <button class="w-full text-center toggle-sub font-medium">Math ▸</button>
+                    <ul class="overflow-scroll max-h-0 transition-all duration-500 pl-4 space-y-1">
+                        <li>Algebra & Geometry</li>
+                        <li>Calculus Practice</li>
+                        <li>Problem Solving</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Column 3: Extra Resources -->
+        <div class="w-[300px] text-center">
+            <h3 class="text-2xl font-semibold mb-4">Extra Resources</h3>
+            <ul class="list-inside space-y-5">
+                <li><a href="#" class="text-purple-600 hover:underline">Reference Book A</a></li>
+                <li><a href="#" class="text-purple-600 hover:underline">Reference Book B</a></li>
+                <li><a href="#" class="text-purple-600 hover:underline">Video Tutorials</a></li>
+                <li><a href="#" class="text-purple-600 hover:underline">Practice Exams</a></li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-700 text-gray-300 py-10 ">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- About -->
+        <div>
+            <h3 class="text-lg font-semibold mb-4">About Us</h3>
+            <p class="text-sm">
+                Study Abroad helps students access courses, tutors, and education resources
+                for success in exams and international opportunities.
+            </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2 text-sm">
+                <li><a href="#" class="hover:text-yellow-400">Home</a></li>
+                <li><a href="#" class="hover:text-yellow-400">Courses</a></li>
+                <li><a href="#" class="hover:text-yellow-400">Tutors</a></li>
+                <li><a href="#" class="hover:text-yellow-400">Education Abroad</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+            <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+            <p class="text-sm mb-2">📧 Email: <a href="mailto:info@studyabroad.com" class="hover:text-yellow-400">info@studyabroad.com</a>
+            </p>
+            <p class="text-sm mb-2">📞 Phone: +994 50 123 45 67</p>
+            <p class="text-sm mb-2">📍 Location: Baku, Azerbaijan</p>
+            <div class="flex space-x-4 mt-4 justify-center md:justify-start">
+                <a href="#" class="hover:text-yellow-400">🔗</a>
+                <a href="#" class="hover:text-yellow-400">🐦</a>
+                <a href="#" class="hover:text-yellow-400">📘</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom -->
+    <div class="mt-10 border-t border-gray-700 pt-4 text-center text-sm">
+        © 2025 Study Abroad. All rights reserved.
+    </div>
+</footer>
+
+<script>
+    document.querySelectorAll('section').forEach(section => {
+        section.querySelectorAll('.toggle-sub').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const panel = btn.nextElementSibling;
+                const column = btn.closest('div');
+
+                // Close other sublists in same column
+                column.querySelectorAll('.toggle-sub').forEach(otherBtn => {
+                    const otherPanel = otherBtn.nextElementSibling;
+                    if (otherPanel !== panel) {
+                        otherPanel.style.maxHeight = null;
+                        otherBtn.textContent = otherBtn.textContent.replace("▾", "▸");
+                    }
+                });
+
+                // Toggle current
+                if (panel.style.maxHeight && panel.style.maxHeight !== "0px") {
+                    panel.style.maxHeight = null;
+                    btn.textContent = btn.textContent.replace("▾", "▸");
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                    btn.textContent = btn.textContent.replace("▸", "▾");
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>
