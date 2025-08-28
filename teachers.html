@@ -35,7 +35,7 @@
 
     <!-- Mobile menu -->
     <div id="mobile-menu" class="hidden md:hidden px-4 pt-4 pb-3 space-y-2 bg-white">
-        <a href="#" class="block px-3 py-2 rounded hover:bg-yellow-400 text-center transition">Home</a>
+        <a href="index.html" class="block px-3 py-2 rounded hover:bg-yellow-400 text-center transition">Home</a>
         <a href="course.html" class="block px-3 py-2 rounded hover:bg-yellow-400 text-center transition">Courses</a>
         <a href="teachers.html" class="block px-3 py-2 rounded bg-yellow-400 text-center transition">Tutors &
             Mentors</a>
@@ -45,7 +45,13 @@
             Up</a>
     </div>
 </nav>
-
+<script>
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+</script>
 <!-- Overview Section -->
 <section class="bg-gradient-to-r from-gray-800 to-gray-700 text-white text-center py-20">
     <h1 class="text-4xl font-bold mb-4">Find the Right Tutor or Mentor</h1>
@@ -263,5 +269,57 @@
         © 2025 Study Abroad. All rights reserved.
     </div>
 </footer>
+<script>
+    const tutorModal = document.getElementById('tutorModal');
+    const tutorModalContent = document.getElementById('tutorModalContent');
+    const closeTutorModal = document.getElementById('closeTutorModal');
+    const tutorBtns = document.querySelectorAll('.tutor-btn');
+
+    const tutorModalImg = document.getElementById('tutorModalImg');
+    const tutorModalName = document.getElementById('tutorModalName');
+    const tutorModalSubjects = document.getElementById('tutorModalSubjects');
+    const tutorModalAge = document.getElementById('tutorModalAge');
+    const tutorModalExperience = document.getElementById('tutorModalExperience');
+    const tutorModalBio = document.getElementById('tutorModalBio');
+
+    function openModal(btn) {
+        tutorModalImg.src = btn.dataset.img;
+        tutorModalName.textContent = btn.dataset.name;
+        tutorModalSubjects.textContent = btn.dataset.subjects;
+        tutorModalAge.textContent = btn.dataset.age;
+        tutorModalExperience.textContent = btn.dataset.experience;
+        tutorModalBio.textContent = btn.dataset.bio;
+
+        tutorModal.classList.remove('hidden');
+        tutorModalContent.classList.remove('modal-hide');
+        tutorModalContent.classList.add('modal-show');
+    }
+
+    function closeModal() {
+        tutorModalContent.classList.remove('modal-show');
+        tutorModalContent.classList.add('modal-hide');
+
+        // Wait for animation to finish
+        tutorModalContent.addEventListener('animationend', () => {
+            tutorModal.classList.add('hidden');
+        }, {once: true});
+    }
+
+    // Open modal
+    tutorBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openModal(btn);
+        });
+    });
+
+    // Close modal
+    closeTutorModal.addEventListener('click', closeModal);
+
+    // Close if clicking outside
+    tutorModal.addEventListener('click', (e) => {
+        if (e.target === tutorModal) closeModal();
+    });
+</script>
 </body>
 </html>
