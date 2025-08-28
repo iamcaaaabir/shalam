@@ -15,10 +15,11 @@
 
         <!-- Desktop links -->
         <div class="hidden md:flex items-center space-x-3">
-            <a href="#" class="px-3 py-1 rounded bg-yellow-400 transition">Home</a>
+            <a href="#" class="px-3 py-1 rounded hover:bg-yellow-400 transition">Home</a>
             <a href="course.html" class="px-3 py-1 rounded hover:bg-yellow-400 transition">Courses</a>
-            <a href="teachers.html" class="px-3 py-1 rounded hover:bg-yellow-400 transition">Tutors & Mentors</a>
-            <input type="text" placeholder="Search..." class="w-60 border border-gray-300 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+            <a href="teachers.html" class="px-3 py-1 rounded bg-yellow-400 transition">Tutors & Mentors</a>
+            <input type="text" placeholder="Search..."
+                   class="w-60 border border-gray-300 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400">
             <a href="#" class="px-4 py-2 bg-yellow-400 text-black rounded hover:bg-yellow-500 transition">Sign Up</a>
         </div>
 
@@ -34,11 +35,14 @@
 
     <!-- Mobile menu -->
     <div id="mobile-menu" class="hidden md:hidden px-4 pt-4 pb-3 space-y-2 bg-white">
-        <a href="#" class="block px-3 py-2 rounded bg-yellow-400 text-center transition">Home</a>
+        <a href="#" class="block px-3 py-2 rounded hover:bg-yellow-400 text-center transition">Home</a>
         <a href="course.html" class="block px-3 py-2 rounded hover:bg-yellow-400 text-center transition">Courses</a>
-        <a href="teachers.html" class="block px-3 py-2 rounded hover:bg-yellow-400 text-center transition">Tutors & Mentors</a>
-        <input type="text" placeholder="Search..." class="w-full border border-gray-300 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400">
-        <a href="#" class="block px-3 py-2 bg-yellow-400 text-black rounded hover:bg-yellow-500 text-center transition">Sign Up</a>
+        <a href="teachers.html" class="block px-3 py-2 rounded bg-yellow-400 text-center transition">Tutors &
+            Mentors</a>
+        <input type="text" placeholder="Search..."
+               class="w-full border border-gray-300 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+        <a href="#" class="block px-3 py-2 bg-yellow-400 text-black rounded hover:bg-yellow-500 text-center transition">Sign
+            Up</a>
     </div>
 </nav>
 
@@ -46,29 +50,33 @@
 <section class="bg-gradient-to-r from-gray-800 to-gray-700 text-white text-center py-20">
     <h1 class="text-4xl font-bold mb-4">Find the Right Tutor or Mentor</h1>
     <p class="text-lg max-w-2xl mx-auto">
-        Here you can find the right people to learn from, improve your skills, or get guidance for university applications.
+        Here you can find the right people to learn from, improve your skills, or get guidance for university
+        applications.
     </p>
 </section>
 
 <!-- Tutor Sections -->
 <section class="bg-gray-100 py-20">
     <div class="max-w-6xl mx-auto space-y-16">
-        <!-- uni-consultant -->
+
+        <!-- University Tutors -->
         <div>
             <h2 class="text-3xl font-bold text-center mb-12">University Tutors</h2>
             <div class="relative flex items-center">
                 <button id="uni-prev"
-                        class="absolute left-0 -translate-x-1/2 z-10 bg-black/30 hover:bg-black/50 text-white text-2xl rounded-full p-4">
+                        class="absolute left-2 z-10 bg-black/30 hover:bg-black/50 text-white text-2xl rounded-full p-4">
                     &#10094;
                 </button>
-                <div id="uni-container" class="flex gap-6 overflow-x-auto w-full px-4 snap-x snap-mandatory scrollbar-hide">
-                    <!-- Tutor Card -->
+
+                <div id="uni-container"
+                     class="flex gap-6 overflow-x-auto w-full snap-x snap-mandatory scroll-pl-4 scrollbar-hide">
                     <div class="bg-white p-6 rounded-xl flex-none w-[90%] sm:w-[45%] md:w-[30%] snap-start flex flex-col items-center text-center shadow-md hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
                         <img src="tutor1.jpg" class="w-32 h-32 rounded-full mb-4">
                         <h3 class="font-semibold text-lg mb-1">Dr. Aysel</h3>
                         <p class="text-gray-600 mb-2">Uni qaqasi</p>
-                        <button class="bg-yellow-400 text-black px-3 py-1 rounded view-profile" data-name="Dr. Aysel"
-                                data-age="35" data-exp="10 years" data-subject="Chemistry"
+                        <button class="bg-yellow-400 text-black px-3 py-1 rounded view-profile"
+                                data-name="Dr. Aysel" data-age="35" data-exp="10 years"
+                                data-subject="Chemistry"
                                 data-bio="Experienced AP Chemistry mentor helping students ace exams.">View Profile
                         </button>
                     </div>
@@ -76,35 +84,41 @@
                         <img src="tutor2.jpg" class="w-32 h-32 rounded-full mb-4">
                         <h3 class="font-semibold text-lg mb-1">Mr. Kamal</h3>
                         <p class="text-gray-600 mb-2">Uni qaqasi</p>
-                        <button class="bg-yellow-400 text-black px-3 py-1 rounded view-profile" data-name="Mr. Kamal"
-                                data-age="40" data-exp="12 years" data-subject="Chemistry"
-                                data-bio="Specializes in guiding students for RFO exams and chemistry competitions.">View Profile
+                        <button class="bg-yellow-400 text-black px-3 py-1 rounded view-profile"
+                                data-name="Mr. Kamal" data-age="40" data-exp="12 years"
+                                data-subject="Chemistry"
+                                data-bio="Specializes in guiding students for RFO exams and chemistry competitions.">
+                            View Profile
                         </button>
                     </div>
-                    <!-- Add more cards -->
+                    <!-- add more cards here -->
                 </div>
+
                 <button id="uni-next"
-                        class="absolute right-0 translate-x-1/2 z-10 bg-black/30 hover:bg-black/50 text-white text-2xl rounded-full p-4">
+                        class="absolute right-2 z-10 bg-black/30 hover:bg-black/50 text-white text-2xl rounded-full p-4">
                     &#10095;
                 </button>
             </div>
         </div>
-        <!-- Chemistry -->
+
+        <!-- Chemistry Tutors -->
         <div>
             <h2 class="text-3xl font-bold text-center mb-12">Chemistry Tutors</h2>
             <div class="relative flex items-center">
                 <button id="chem-prev"
-                        class="absolute left-0 -translate-x-1/2 z-10 bg-black/30 hover:bg-black/50 text-white text-2xl rounded-full p-4">
+                        class="absolute left-2 z-10 bg-black/30 hover:bg-black/50 text-white text-2xl rounded-full p-4">
                     &#10094;
                 </button>
-                <div id="chem-container" class="flex gap-6 overflow-x-auto w-full px-4 snap-x snap-mandatory scrollbar-hide">
-                    <!-- Tutor Card -->
+
+                <div id="chem-container"
+                     class="flex gap-6 overflow-x-auto w-full snap-x snap-mandatory scroll-pl-4 scrollbar-hide">
                     <div class="bg-white p-6 rounded-xl flex-none w-[90%] sm:w-[45%] md:w-[30%] snap-start flex flex-col items-center text-center shadow-md hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
                         <img src="tutor1.jpg" class="w-32 h-32 rounded-full mb-4">
                         <h3 class="font-semibold text-lg mb-1">Dr. Aysel</h3>
                         <p class="text-gray-600 mb-2">AP Chemistry Mentor</p>
-                        <button class="bg-yellow-400 text-black px-3 py-1 rounded view-profile" data-name="Dr. Aysel"
-                                data-age="35" data-exp="10 years" data-subject="Chemistry"
+                        <button class="bg-yellow-400 text-black px-3 py-1 rounded view-profile"
+                                data-name="Dr. Aysel" data-age="35" data-exp="10 years"
+                                data-subject="Chemistry"
                                 data-bio="Experienced AP Chemistry mentor helping students ace exams.">View Profile
                         </button>
                     </div>
@@ -112,119 +126,284 @@
                         <img src="tutor2.jpg" class="w-32 h-32 rounded-full mb-4">
                         <h3 class="font-semibold text-lg mb-1">Mr. Kamal</h3>
                         <p class="text-gray-600 mb-2">RFO Chemistry Mentor</p>
-                        <button class="bg-yellow-400 text-black px-3 py-1 rounded view-profile" data-name="Mr. Kamal"
-                                data-age="40" data-exp="12 years" data-subject="Chemistry"
-                                data-bio="Specializes in guiding students for RFO exams and chemistry competitions.">View Profile
+                        <button class="bg-yellow-400 text-black px-3 py-1 rounded view-profile"
+                                data-name="Mr. Kamal" data-age="40" data-exp="12 years"
+                                data-subject="Chemistry"
+                                data-bio="Specializes in guiding students for RFO exams and chemistry competitions.">
+                            View Profile
                         </button>
                     </div>
-                    <!-- Add more cards -->
+                    <!-- add more cards here -->
                 </div>
-                <button id="chem-next"
-                        class="absolute right-0 translate-x-1/2 z-10 bg-black/30 hover:bg-black/50 text-white text-2xl rounded-full p-4">
+
+                <button id="phys-next"
+                        class="absolute right-2 z-10 bg-black/30 hover:bg-black/50 text-white text-2xl rounded-full p-4">
                     &#10095;
                 </button>
             </div>
         </div>
-
-        <!-- Physics -->
         <div>
             <h2 class="text-3xl font-bold text-center mb-12">Physics Tutors</h2>
             <div class="relative flex items-center">
                 <button id="phys-prev"
-                        class="absolute left-0 -translate-x-1/2 z-10 bg-black/30 hover:bg-black/50 text-white text-2xl rounded-full p-4">
+                        class="absolute left-2 z-10 bg-black/30 hover:bg-black/50 text-white text-2xl rounded-full p-4">
                     &#10094;
                 </button>
-                <div id="phys-container" class="flex gap-6 overflow-x-auto w-full px-4 snap-x snap-mandatory scrollbar-hide">
-                    <!-- Tutor Card -->
+
+                <div id="phys-container"
+                     class="flex gap-6 overflow-x-auto w-full snap-x snap-mandatory scroll-pl-4 scrollbar-hide">
                     <div class="bg-white p-6 rounded-xl flex-none w-[90%] sm:w-[45%] md:w-[30%] snap-start flex flex-col items-center text-center shadow-md hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
-                        <img src="tutor3.jpg" class="w-32 h-32 rounded-full mb-4">
-                        <h3 class="font-semibold text-lg mb-1">Dr. Leyla</h3>
-                        <p class="text-gray-600 mb-2">AP Physics Mentor</p>
-                        <button class="bg-yellow-400 text-black px-3 py-1 rounded view-profile" data-name="Dr. Leyla"
-                                data-age="33" data-exp="8 years" data-subject="Physics"
-                                data-bio="Helps students master AP Physics and problem solving.">View Profile
+                        <img src="tutor1.jpg" class="w-32 h-32 rounded-full mb-4">
+                        <h3 class="font-semibold text-lg mb-1">Dr. Aysel</h3>
+                        <p class="text-gray-600 mb-2">AP Chemistry Mentor</p>
+                        <button class="bg-yellow-400 text-black px-3 py-1 rounded view-profile"
+                                data-name="Dr. Aysel" data-age="35" data-exp="10 years"
+                                data-subject="Chemistry"
+                                data-bio="Experienced AP Chemistry mentor helping students ace exams.">View Profile
                         </button>
                     </div>
-                    <!-- Add more cards -->
+                    <div class="bg-white p-6 rounded-xl flex-none w-[90%] sm:w-[45%] md:w-[30%] snap-start flex flex-col items-center text-center shadow-md hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
+                        <img src="tutor2.jpg" class="w-32 h-32 rounded-full mb-4">
+                        <h3 class="font-semibold text-lg mb-1">Mr. Kamal</h3>
+                        <p class="text-gray-600 mb-2">RFO Chemistry Mentor</p>
+                        <button class="bg-yellow-400 text-black px-3 py-1 rounded view-profile"
+                                data-name="Mr. Kamal" data-age="40" data-exp="12 years"
+                                data-subject="Chemistry"
+                                data-bio="Specializes in guiding students for RFO exams and chemistry competitions.">
+                            View Profile
+                        </button>
+                    </div>
+                    <!-- add more cards here -->
                 </div>
-                <button id="phys-next"
-                        class="absolute right-0 translate-x-1/2 z-10 bg-black/30 hover:bg-black/50 text-white text-2xl rounded-full p-4">
+
+                <button id="cs-next"
+                        class="absolute right-2 z-10 bg-black/30 hover:bg-black/50 text-white text-2xl rounded-full p-4">
                     &#10095;
                 </button>
             </div>
         </div>
+        <div>
+            <h2 class="text-3xl font-bold text-center mb-12">Computer Science Tutors</h2>
+            <div class="relative flex items-center">
+                <button id="cs-prev"
+                        class="absolute left-2 z-10 bg-black/30 hover:bg-black/50 text-white text-2xl rounded-full p-4">
+                    &#10094;
+                </button>
 
-        <!-- Math -->
+                <div id="cs-container"
+                     class="flex gap-6 overflow-x-auto w-full snap-x snap-mandatory scroll-pl-4 scrollbar-hide">
+                    <div class="bg-white p-6 rounded-xl flex-none w-[90%] sm:w-[45%] md:w-[30%] snap-start flex flex-col items-center text-center shadow-md hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
+                        <img src="tutor1.jpg" class="w-32 h-32 rounded-full mb-4">
+                        <h3 class="font-semibold text-lg mb-1">Dr. Aysel</h3>
+                        <p class="text-gray-600 mb-2">AP Chemistry Mentor</p>
+                        <button class="bg-yellow-400 text-black px-3 py-1 rounded view-profile"
+                                data-name="Dr. Aysel" data-age="35" data-exp="10 years"
+                                data-subject="Chemistry"
+                                data-bio="Experienced AP Chemistry mentor helping students ace exams.">View Profile
+                        </button>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl flex-none w-[90%] sm:w-[45%] md:w-[30%] snap-start flex flex-col items-center text-center shadow-md hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
+                        <img src="tutor2.jpg" class="w-32 h-32 rounded-full mb-4">
+                        <h3 class="font-semibold text-lg mb-1">Mr. Kamal</h3>
+                        <p class="text-gray-600 mb-2">RFO Chemistry Mentor</p>
+                        <button class="bg-yellow-400 text-black px-3 py-1 rounded view-profile"
+                                data-name="Mr. Kamal" data-age="40" data-exp="12 years"
+                                data-subject="Chemistry"
+                                data-bio="Specializes in guiding students for RFO exams and chemistry competitions.">
+                            View Profile
+                        </button>
+                    </div>
+                    <!-- add more cards here -->
+                </div>
+
+                <button id="math-next"
+                        class="absolute right-2 z-10 bg-black/30 hover:bg-black/50 text-white text-2xl rounded-full p-4">
+                    &#10095;
+                </button>
+            </div>
+        </div>
         <div>
             <h2 class="text-3xl font-bold text-center mb-12">Math Tutors</h2>
             <div class="relative flex items-center">
                 <button id="math-prev"
-                        class="absolute left-0 -translate-x-1/2 z-10 bg-black/30 hover:bg-black/50 text-white text-2xl rounded-full p-4">
+                        class="absolute left-2 z-10 bg-black/30 hover:bg-black/50 text-white text-2xl rounded-full p-4">
                     &#10094;
                 </button>
-                <div id="math-container" class="flex gap-6 overflow-x-auto w-full px-4 snap-x snap-mandatory scrollbar-hide">
-                    <!-- Tutor Card -->
-                    <div class="bg-white p-6 rounded-xl flex-none w-[90%] sm:w-[45%] md:w-[30%] snap-start flex flex-col items-center text-center shadow-md hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
-                        <img src="tutor4.jpg" class="w-32 h-32 rounded-full mb-4">
-                        <h3 class="font-semibold text-lg mb-1">Mr. Farid</h3>
-                        <p class="text-gray-600 mb-2">Calculus Mentor</p>
-                        <button class="bg-yellow-400 text-black px-3 py-1 rounded view-profile" data-name="Mr. Farid"
-                                data-age="38" data-exp="11 years" data-subject="Math"
-                                data-bio="Guides students through advanced calculus and problem-solving techniques.">View Profile
-                        </button>
-                    </div>
-                </div>
-                <button id="math-next"
-                        class="absolute right-0 translate-x-1/2 z-10 bg-black/30 hover:bg-black/50 text-white text-2xl rounded-full p-4">
-                    &#10095;
-                </button>
-            </div>
-        </div>
 
-        <!-- Informatics -->
-        <div>
-            <h2 class="text-3xl font-bold text-center mb-12">Informatics Tutors</h2>
-            <div class="relative flex items-center">
-                <button id="cs-prev"
-                        class="absolute left-0 -translate-x-1/2 z-10 bg-black/30 hover:bg-black/50 text-white text-2xl rounded-full p-4">
-                    &#10094;
-                </button>
-                <div id="cs-container" class="flex gap-6 overflow-x-auto w-full px-4 snap-x snap-mandatory scrollbar-hide">
-                    <!-- Tutor Card -->
+                <div id="math-container"
+                     class="flex gap-6 overflow-x-auto w-full snap-x snap-mandatory scroll-pl-4 scrollbar-hide">
                     <div class="bg-white p-6 rounded-xl flex-none w-[90%] sm:w-[45%] md:w-[30%] snap-start flex flex-col items-center text-center shadow-md hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
-                        <img src="tutor5.jpg" class="w-32 h-32 rounded-full mb-4">
-                        <h3 class="font-semibold text-lg mb-1">Ms. Nigar</h3>
-                        <p class="text-gray-600 mb-2">Informatics Mentor</p>
-                        <button class="bg-yellow-400 text-black px-3 py-1 rounded view-profile" data-name="Ms. Nigar"
-                                data-age="30" data-exp="7 years" data-subject="Informatics"
-                                data-bio="Helps students learn programming and competitive informatics.">View Profile
+                        <img src="tutor1.jpg" class="w-32 h-32 rounded-full mb-4">
+                        <h3 class="font-semibold text-lg mb-1">Dr. Aysel</h3>
+                        <p class="text-gray-600 mb-2">AP Chemistry Mentor</p>
+                        <button class="bg-yellow-400 text-black px-3 py-1 rounded view-profile"
+                                data-name="Dr. Aysel" data-age="35" data-exp="10 years"
+                                data-subject="Chemistry"
+                                data-bio="Experienced AP Chemistry mentor helping students ace exams.">View Profile
                         </button>
                     </div>
+                    <div class="bg-white p-6 rounded-xl flex-none w-[90%] sm:w-[45%] md:w-[30%] snap-start flex flex-col items-center text-center shadow-md hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
+                        <img src="tutor2.jpg" class="w-32 h-32 rounded-full mb-4">
+                        <h3 class="font-semibold text-lg mb-1">Mr. Kamal</h3>
+                        <p class="text-gray-600 mb-2">RFO Chemistry Mentor</p>
+                        <button class="bg-yellow-400 text-black px-3 py-1 rounded view-profile"
+                                data-name="Mr. Kamal" data-age="40" data-exp="12 years"
+                                data-subject="Chemistry"
+                                data-bio="Specializes in guiding students for RFO exams and chemistry competitions.">
+                            View Profile
+                        </button>
+                    </div>
+                    <!-- add more cards here -->
                 </div>
-                <button id="cs-next"
-                        class="absolute right-0 translate-x-1/2 z-10 bg-black/30 hover:bg-black/50 text-white text-2xl rounded-full p-4">
+
+                <button id="chem-next"
+                        class="absolute right-2 z-10 bg-black/30 hover:bg-black/50 text-white text-2xl rounded-full p-4">
                     &#10095;
                 </button>
             </div>
         </div>
+        <div>
+            <h2 class="text-3xl font-bold text-center mb-12">English Tutors</h2>
+            <div class="relative flex items-center">
+                <button id="eng-prev"
+                        class="absolute left-2 z-10 bg-black/30 hover:bg-black/50 text-white text-2xl rounded-full p-4">
+                    &#10094;
+                </button>
+
+                <div id="eng-container"
+                     class="flex gap-6 overflow-x-auto w-full snap-x snap-mandatory scroll-pl-4 scrollbar-hide">
+                    <div class="bg-white p-6 rounded-xl flex-none w-[90%] sm:w-[45%] md:w-[30%] snap-start flex flex-col items-center text-center shadow-md hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
+                        <img src="tutor1.jpg" class="w-32 h-32 rounded-full mb-4">
+                        <h3 class="font-semibold text-lg mb-1">Dr. Aysel</h3>
+                        <p class="text-gray-600 mb-2">AP Chemistry Mentor</p>
+                        <button class="bg-yellow-400 text-black px-3 py-1 rounded view-profile"
+                                data-name="Dr. Aysel" data-age="35" data-exp="10 years"
+                                data-subject="Chemistry"
+                                data-bio="Experienced AP Chemistry mentor helping students ace exams.">View Profile
+                        </button>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl flex-none w-[90%] sm:w-[45%] md:w-[30%] snap-start flex flex-col items-center text-center shadow-md hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
+                        <img src="tutor2.jpg" class="w-32 h-32 rounded-full mb-4">
+                        <h3 class="font-semibold text-lg mb-1">Mr. Kamal</h3>
+                        <p class="text-gray-600 mb-2">RFO Chemistry Mentor</p>
+                        <button class="bg-yellow-400 text-black px-3 py-1 rounded view-profile"
+                                data-name="Mr. Kamal" data-age="40" data-exp="12 years"
+                                data-subject="Chemistry"
+                                data-bio="Specializes in guiding students for RFO exams and chemistry competitions.">
+                            View Profile
+                        </button>
+                    </div>
+                    <!-- add more cards here -->
+                </div>
+
+                <button id="eng-next"
+                        class="absolute right-2 z-10 bg-black/30 hover:bg-black/50 text-white text-2xl rounded-full p-4">
+                    &#10095;
+                </button>
+            </div>
+        </div>
+        <div>
+            <h2 class="text-3xl font-bold text-center mb-12">Biology Tutors</h2>
+            <div class="relative flex items-center">
+                <button id="bio-prev"
+                        class="absolute left-2 z-10 bg-black/30 hover:bg-black/50 text-white text-2xl rounded-full p-4">
+                    &#10094;
+                </button>
+
+                <div id="bio-container"
+                     class="flex gap-6 overflow-x-auto w-full snap-x snap-mandatory scroll-pl-4 scrollbar-hide">
+                    <div class="bg-white p-6 rounded-xl flex-none w-[90%] sm:w-[45%] md:w-[30%] snap-start flex flex-col items-center text-center shadow-md hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
+                        <img src="tutor1.jpg" class="w-32 h-32 rounded-full mb-4">
+                        <h3 class="font-semibold text-lg mb-1">Dr. Aysel</h3>
+                        <p class="text-gray-600 mb-2">AP Chemistry Mentor</p>
+                        <button class="bg-yellow-400 text-black px-3 py-1 rounded view-profile"
+                                data-name="Dr. Aysel" data-age="35" data-exp="10 years"
+                                data-subject="Chemistry"
+                                data-bio="Experienced AP Chemistry mentor helping students ace exams.">View Profile
+                        </button>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl flex-none w-[90%] sm:w-[45%] md:w-[30%] snap-start flex flex-col items-center text-center shadow-md hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
+                        <img src="tutor2.jpg" class="w-32 h-32 rounded-full mb-4">
+                        <h3 class="font-semibold text-lg mb-1">Mr. Kamal</h3>
+                        <p class="text-gray-600 mb-2">RFO Chemistry Mentor</p>
+                        <button class="bg-yellow-400 text-black px-3 py-1 rounded view-profile"
+                                data-name="Mr. Kamal" data-age="40" data-exp="12 years"
+                                data-subject="Chemistry"
+                                data-bio="Specializes in guiding students for RFO exams and chemistry competitions.">
+                            View Profile
+                        </button>
+                    </div>
+                    <!-- add more cards here -->
+                </div>
+
+                <button id="bio-next"
+                        class="absolute right-2 z-10 bg-black/30 hover:bg-black/50 text-white text-2xl rounded-full p-4">
+                    &#10095;
+                </button>
+            </div>
+        </div>
+        <!-- Repeat for Physics, Math, Informatics similarly, just replace IDs and button IDs -->
 
     </div>
 </section>
 
-<!-- Modal -->
-<div id="teacherModal" class="fixed inset-0 bg-black/50 flex items-center justify-center hidden">
-    <div class="bg-white rounded-lg p-8 max-w-lg w-full relative">
-        <button id="closeModal" class="absolute top-4 right-4 text-xl font-bold">&times;</button>
-        <h3 class="text-2xl font-semibold mb-2" id="modalName"></h3>
-        <p class="mb-1" id="modalAge"></p>
-        <p class="mb-1" id="modalExp"></p>
-        <p class="mb-1" id="modalSubject"></p>
-        <p class="mt-4" id="modalBio"></p>
-    </div>
-</div>
+<style>
+    /* Hide scrollbars properly */
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
 
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    /* Scroll padding to prevent first card peek */
+    #uni-container, #chem-container, #phys-container, #math-container, #cs-container {
+        scroll-padding-left: 1rem;
+    }
+</style>
+
+<script>
+    function setupScroll(containerId, prevId, nextId) {
+        const container = document.getElementById(containerId);
+        const prev = document.getElementById(prevId);
+        const next = document.getElementById(nextId);
+        let index = 0;
+
+        const cardWidth = () => container.children[0].getBoundingClientRect().width;
+        const gap = () => parseInt(getComputedStyle(container).gap);
+
+        function scroll() {
+            container.scrollTo({left: index * (cardWidth() + gap()), behavior: 'smooth'});
+        }
+
+        next.addEventListener('click', () => {
+            index++;
+            if (index > container.children.length - Math.floor(container.offsetWidth / cardWidth())) index = 0;
+            scroll();
+        });
+
+        prev.addEventListener('click', () => {
+            index--;
+            if (index < 0) index = container.children.length - Math.floor(container.offsetWidth / cardWidth());
+            scroll();
+        });
+    }
+
+    // Initialize all sliders
+    setupScroll('uni-container', 'uni-prev', 'uni-next');
+    setupScroll('chem-container', 'chem-prev', 'chem-next');
+    setupScroll('phys-container', 'phys-prev', 'phys-next');
+    setupScroll('math-container', 'math-prev', 'math-next');
+    setupScroll('cs-container', 'cs-prev', 'cs-next');
+    setupScroll('eng-container', 'eng-prev', 'eng-next');
+    setupScroll('bio-container', 'bio-prev', 'bio-next');
+</script>
 <footer class="bg-gray-700 text-gray-300 py-10 ">
     <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- About -->
         <div>
             <h3 class="text-lg font-semibold mb-4">About Us</h3>
             <p class="text-sm">
@@ -232,6 +411,8 @@
                 for success in exams and international opportunities.
             </p>
         </div>
+
+        <!-- Quick Links -->
         <div>
             <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
             <ul class="space-y-2 text-sm">
@@ -241,9 +422,12 @@
                 <li><a href="#" class="hover:text-yellow-400">Education Abroad</a></li>
             </ul>
         </div>
+
+        <!-- Contact -->
         <div>
             <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
-            <p class="text-sm mb-2">📧 Email: <a href="mailto:info@studyabroad.com" class="hover:text-yellow-400">info@studyabroad.com</a></p>
+            <p class="text-sm mb-2">📧 Email: <a href="mailto:info@studyabroad.com" class="hover:text-yellow-400">info@studyabroad.com</a>
+            </p>
             <p class="text-sm mb-2">📞 Phone: +994 50 123 45 67</p>
             <p class="text-sm mb-2">📍 Location: Baku, Azerbaijan</p>
             <div class="flex space-x-4 mt-4 justify-center md:justify-start">
@@ -253,60 +437,11 @@
             </div>
         </div>
     </div>
+
+    <!-- Bottom -->
     <div class="mt-10 border-t border-gray-700 pt-4 text-center text-sm">
         © 2025 Study Abroad. All rights reserved.
     </div>
 </footer>
-
-<script>
-    // Modal
-    const modal = document.getElementById('teacherModal');
-    const closeModal = document.getElementById('closeModal');
-
-    document.querySelectorAll('.view-profile').forEach(btn => {
-        btn.addEventListener('click', () => {
-            modal.classList.remove('hidden');
-            document.getElementById('modalName').innerText = btn.dataset.name;
-            document.getElementById('modalAge').innerText = "Age: " + btn.dataset.age;
-            document.getElementById('modalExp').innerText = "Experience: " + btn.dataset.exp;
-            document.getElementById('modalSubject').innerText = "Subject: " + btn.dataset.subject;
-            document.getElementById('modalBio').innerText = btn.dataset.bio;
-        });
-    });
-
-    closeModal.addEventListener('click', () => modal.classList.add('hidden'));
-
-    // Slider setup
-    function setupScroll(containerId, prevId, nextId) {
-        const container = document.getElementById(containerId);
-        const prev = document.getElementById(prevId);
-        const next = document.getElementById(nextId);
-        let index = 0;
-
-        function scroll() {
-            const gap = parseInt(getComputedStyle(container).gap);
-            const cardWidth = container.children[0].getBoundingClientRect().width;
-            container.scrollTo({left: (cardWidth + gap) * index, behavior: 'smooth'});
-        }
-
-        next.addEventListener('click', () => {
-            index++;
-            if (index > container.children.length - Math.floor(container.offsetWidth / container.children[0].offsetWidth)) index = 0;
-            scroll();
-        });
-
-        prev.addEventListener('click', () => {
-            index--;
-            if (index < 0) index = container.children.length - Math.floor(container.offsetWidth / container.children[0].offsetWidth);
-            scroll();
-        });
-    }
-    setupScroll('uni-container','uni-prev','uni-next');
-    setupScroll('chem-container','chem-prev','chem-next');
-    setupScroll('phys-container','phys-prev','phys-next');
-    setupScroll('math-container','math-prev','math-next');
-    setupScroll('cs-container','cs-prev','cs-next');
-</script>
-
 </body>
 </html>
