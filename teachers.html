@@ -119,43 +119,6 @@
         </button>
     </div>
 </section>
-
-<script>
-    const tutorContainer = document.getElementById('tutor-container');
-    const tutorPrev = document.getElementById('chem-prev');
-    const tutorNext = document.getElementById('chem-next');
-
-    let tutorIndex = 0;
-
-    // Determine visible cards based on screen width
-    function getVisibleTutors() {
-        if (window.innerWidth < 640) return 1;      // mobile
-        if (window.innerWidth < 1024) return 2;     // tablet
-        return 3;                                   // desktop
-    }
-
-    function scrollTutors() {
-        const visibleTutors = getVisibleTutors();
-        const card = tutorContainer.children[0];
-        const gap = parseInt(getComputedStyle(tutorContainer).gap);
-        const cardWidth = card.getBoundingClientRect().width + gap;
-
-        // clamp index
-        if (tutorIndex < 0) tutorIndex = tutorContainer.children.length - visibleTutors;
-        if (tutorIndex > tutorContainer.children.length - visibleTutors) tutorIndex = 0;
-
-        tutorContainer.scrollTo({left: tutorIndex * cardWidth, behavior: 'smooth'});
-    }
-
-    // Event listeners
-    tutorNext.addEventListener('click', () => { tutorIndex++; scrollTutors(); });
-    tutorPrev.addEventListener('click', () => { tutorIndex--; scrollTutors(); });
-
-    // Reset scroll on resize
-    window.addEventListener('resize', () => scrollTutors());
-    window.addEventListener('load', () => scrollTutors());
-</script>
-
 <section class="bg-gray-100 py-20 relative">
     <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">Physics Tutors</h2>
 
@@ -219,41 +182,42 @@
         </button>
     </div>
 </section>
-
 <script>
-    const tutorContainer = document.getElementById('phy-container');
-    const tutorPrev = document.getElementById('phy-prev');
-    const tutorNext = document.getElementById('phy-next');
+    function setupSlider(containerId, prevId, nextId) {
+        const container = document.getElementById(containerId);
+        const prev = document.getElementById(prevId);
+        const next = document.getElementById(nextId);
+        let index = 0;
 
-    let tutorIndex = 0;
+        function getVisibleCards() {
+            if (window.innerWidth < 640) return 1;    // mobile
+            if (window.innerWidth < 1024) return 2;   // tablet
+            return 3;                                 // desktop
+        }
 
-    // Determine visible cards based on screen width
-    function getVisibleTutors() {
-        if (window.innerWidth < 640) return 1;      // mobile
-        if (window.innerWidth < 1024) return 2;     // tablet
-        return 3;                                   // desktop
+        function scroll() {
+            const visible = getVisibleCards();
+            const card = container.children[0];
+            if (!card) return; // safety check
+            const gap = parseInt(getComputedStyle(container).gap) || 0;
+            const cardWidth = card.getBoundingClientRect().width + gap;
+
+            // clamp index
+            if (index < 0) index = container.children.length - visible;
+            if (index > container.children.length - visible) index = 0;
+
+            container.scrollTo({ left: index * cardWidth, behavior: 'smooth' });
+        }
+
+        next.addEventListener('click', () => { index++; scroll(); });
+        prev.addEventListener('click', () => { index--; scroll(); });
+        window.addEventListener('resize', scroll);
+        window.addEventListener('load', scroll);
     }
 
-    function scrollTutors() {
-        const visibleTutors = getVisibleTutors();
-        const card = tutorContainer.children[0];
-        const gap = parseInt(getComputedStyle(tutorContainer).gap);
-        const cardWidth = card.getBoundingClientRect().width + gap;
-
-        // clamp index
-        if (tutorIndex < 0) tutorIndex = tutorContainer.children.length - visibleTutors;
-        if (tutorIndex > tutorContainer.children.length - visibleTutors) tutorIndex = 0;
-
-        tutorContainer.scrollTo({left: tutorIndex * cardWidth, behavior: 'smooth'});
-    }
-
-    // Event listeners
-    tutorNext.addEventListener('click', () => { tutorIndex++; scrollTutors(); });
-    tutorPrev.addEventListener('click', () => { tutorIndex--; scrollTutors(); });
-
-    // Reset scroll on resize
-    window.addEventListener('resize', () => scrollTutors());
-    window.addEventListener('load', () => scrollTutors());
+    // Initialize sliders
+    setupSlider('chem-container', 'chem-prev', 'chem-next');
+    setupSlider('phy-container', 'phy-prev', 'phy-next');
 </script>
 
 <footer class="bg-gray-700 text-gray-300 py-10 ">
