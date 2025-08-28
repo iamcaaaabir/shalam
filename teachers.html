@@ -56,194 +56,204 @@
 </section>
 
 <!-- Tutor Sections -->
-<section class="bg-gray-100 py-20">
-    <div class="max-w-6xl mx-auto space-y-16 px-4">
+<section class="bg-gray-100 py-20 relative">
+    <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">Chemistry Tutors</h2>
 
-        <!-- UNIVERSITY -->
-        <div>
-            <h2 class="text-3xl font-bold text-center mb-12">University Tutors</h2>
-            <div class="relative flex items-center">
-                <button id="uni-prev" class="absolute left-0 sm:left-2 z-10 bg-black/30 hover:bg-black/50 text-white text-2xl rounded-full p-3 sm:p-4">&#10094;</button>
-                <div id="uni-container" class="flex gap-4 sm:gap-6 overflow-x-auto w-full snap-x snap-mandatory scroll-pl-4 sm:scroll-pl-6 scrollbar-hide justify-center">
-                    <div class="bg-white p-6 rounded-xl flex-none w-[80%] sm:w-[45%] md:w-[30%] snap-start flex flex-col items-center text-center shadow-md hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
-                        <img src="tutor1.jpg" class="w-32 h-32 rounded-full mb-4">
-                        <h3 class="font-semibold text-lg mb-1">Dr. Aysel</h3>
-                        <p class="text-gray-600 mb-2">Uni Mentor</p>
-                        <button class="bg-yellow-400 text-black px-3 py-1 rounded view-profile">View Profile</button>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl flex-none w-[80%] sm:w-[45%] md:w-[30%] snap-start flex flex-col items-center text-center shadow-md hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
-                        <img src="tutor2.jpg" class="w-32 h-32 rounded-full mb-4">
-                        <h3 class="font-semibold text-lg mb-1">Mr. Kamal</h3>
-                        <p class="text-gray-600 mb-2">Uni Mentor</p>
-                        <button class="bg-yellow-400 text-black px-3 py-1 rounded view-profile">View Profile</button>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl flex-none w-[80%] sm:w-[45%] md:w-[30%] snap-start flex flex-col items-center text-center shadow-md hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
-                        <img src="tutor3.jpg" class="w-32 h-32 rounded-full mb-4">
-                        <h3 class="font-semibold text-lg mb-1">Dr. Leyla</h3>
-                        <p class="text-gray-600 mb-2">Uni Mentor</p>
-                        <button class="bg-yellow-400 text-black px-3 py-1 rounded view-profile">View Profile</button>
-                    </div>
-                </div>
-                <button id="uni-next" class="absolute right-0 sm:right-2 z-10 bg-black/30 hover:bg-black/50 text-white text-2xl rounded-full p-3 sm:p-4">&#10095;</button>
+    <div class="max-w-6xl mx-auto flex items-center relative">
+
+        <!-- Left arrow -->
+        <button id="chem-prev"
+                class="absolute left-0 md:left-[-2rem] top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 text-3xl md:text-4xl rounded-full p-3 md:p-4 z-20 shadow-lg transition-transform duration-200 hover:scale-110">
+            &#10094;
+        </button>
+
+        <!-- Tutors container -->
+        <div id="chem-container" class="flex gap-4 sm:gap-6 md:gap-8 overflow-x-auto w-full px-2 sm:px-4 md:px-0 snap-x snap-mandatory scrollbar-hide">
+            <!-- Tutor Card Template -->
+            <div class="bg-white p-6 rounded-lg flex-none w-full sm:w-[45%] md:w-[calc(33.333%-16px)] flex flex-col items-center text-center snap-center">
+                <img src="tutor1.png" alt="Tutor 1" class="w-32 h-32 rounded-full mb-4">
+                <h3 class="font-semibold text-lg mb-1 text-gray-900">Mr. Nariman</h3>
+                <p class="text-gray-900 mb-2">AP Chemistry & Physics Mentor</p>
+                <a href="#"
+                   class="bg-yellow-400 text-black px-3 py-1 rounded tutor-btn"
+                   data-name="Mr. Nariman"
+                   data-subjects="AP Chemistry & Physics"
+                   data-img="tutor1.png"
+                   data-bio="Dr. Aysel is an experienced mentor helping students excel in AP Chemistry and Physics. Loves interactive learning and chemistry experiments.">
+                    View Profile
+                </a>
             </div>
+            <div class="bg-white p-6 rounded-lg flex-none w-full sm:w-[45%] md:w-[calc(33.333%-16px)] flex flex-col items-center text-center snap-center">
+                <img src="tutor1.png" alt="Tutor 1" class="w-32 h-32 rounded-full mb-4">
+                <h3 class="font-semibold text-lg mb-1 text-gray-900">Mr. Nariman</h3>
+                <p class="text-gray-900 mb-2">AP Chemistry & Physics Mentor</p>
+                <a href="#"
+                   class="bg-yellow-400 text-black px-3 py-1 rounded tutor-btn"
+                   data-name="Mr. Nariman"
+                   data-subjects="AP Chemistry & Physics"
+                   data-img="tutor1.png"
+                   data-bio="Dr. Aysel is an experienced mentor helping students excel in AP Chemistry and Physics. Loves interactive learning and chemistry experiments.">
+                    View Profile
+                </a>
+            </div>
+            <div class="bg-white p-6 rounded-lg flex-none w-full sm:w-[45%] md:w-[calc(33.333%-16px)] flex flex-col items-center text-center snap-center">
+                <img src="tutor1.png" alt="Tutor 1" class="w-32 h-32 rounded-full mb-4">
+                <h3 class="font-semibold text-lg mb-1 text-gray-900">Mr. Nariman</h3>
+                <p class="text-gray-900 mb-2">AP Chemistry & Physics Mentor</p>
+                <a href="#"
+                   class="bg-yellow-400 text-black px-3 py-1 rounded tutor-btn"
+                   data-name="Mr. Nariman"
+                   data-subjects="AP Chemistry & Physics"
+                   data-img="tutor1.png"
+                   data-bio="Dr. Aysel is an experienced mentor helping students excel in AP Chemistry and Physics. Loves interactive learning and chemistry experiments.">
+                    View Profile
+                </a>
+            </div>
+            <!-- Duplicate this card for others -->
         </div>
 
-        <!-- CHEMISTRY -->
-        <div>
-            <h2 class="text-3xl font-bold text-center mb-12">Chemistry Tutors</h2>
-            <div class="relative flex items-center">
-                <button id="chem-prev" class="absolute left-0 sm:left-2 z-10 bg-black/30 hover:bg-black/50 text-white text-2xl rounded-full p-3 sm:p-4">&#10094;</button>
-                <div id="chem-container" class="flex gap-4 sm:gap-6 overflow-x-auto w-full snap-x snap-mandatory scroll-pl-4 sm:scroll-pl-6 scrollbar-hide justify-center">
-                    <div class="bg-white p-6 rounded-xl flex-none w-[80%] sm:w-[45%] md:w-[30%] snap-start flex flex-col items-center text-center shadow-md hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
-                        <img src="tutor1.jpg" class="w-32 h-32 rounded-full mb-4">
-                        <h3 class="font-semibold text-lg mb-1">Dr. Aysel</h3>
-                        <p class="text-gray-600 mb-2">AP Chemistry Mentor</p>
-                        <button class="bg-yellow-400 text-black px-3 py-1 rounded view-profile">View Profile</button>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl flex-none w-[80%] sm:w-[45%] md:w-[30%] snap-start flex flex-col items-center text-center shadow-md hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
-                        <img src="tutor2.jpg" class="w-32 h-32 rounded-full mb-4">
-                        <h3 class="font-semibold text-lg mb-1">Mr. Kamal</h3>
-                        <p class="text-gray-600 mb-2">RFO Chemistry Mentor</p>
-                        <button class="bg-yellow-400 text-black px-3 py-1 rounded view-profile">View Profile</button>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl flex-none w-[80%] sm:w-[45%] md:w-[30%] snap-start flex flex-col items-center text-center shadow-md hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
-                        <img src="tutor3.jpg" class="w-32 h-32 rounded-full mb-4">
-                        <h3 class="font-semibold text-lg mb-1">Dr. Leyla</h3>
-                        <p class="text-gray-600 mb-2">RFO Chemistry Mentor</p>
-                        <button class="bg-yellow-400 text-black px-3 py-1 rounded view-profile">View Profile</button>
-                    </div>
-                </div>
-                <button id="chem-next" class="absolute right-0 sm:right-2 z-10 bg-black/30 hover:bg-black/50 text-white text-2xl rounded-full p-3 sm:p-4">&#10095;</button>
-            </div>
-        </div>
-
-        <!-- PHYSICS -->
-        <div>
-            <h2 class="text-3xl font-bold text-center mb-12">Physics Tutors</h2>
-            <div class="relative flex items-center">
-                <button id="phys-prev" class="absolute left-0 sm:left-2 z-10 bg-black/30 hover:bg-black/50 text-white text-2xl rounded-full p-3 sm:p-4">&#10094;</button>
-                <div id="phys-container" class="flex gap-4 sm:gap-6 overflow-x-auto w-full snap-x snap-mandatory scroll-pl-4 sm:scroll-pl-6 scrollbar-hide justify-center">
-                    <div class="bg-white p-6 rounded-xl flex-none w-[80%] sm:w-[45%] md:w-[30%] snap-start flex flex-col items-center text-center shadow-md hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
-                        <img src="tutor1.jpg" class="w-32 h-32 rounded-full mb-4">
-                        <h3 class="font-semibold text-lg mb-1">Dr. Aysel</h3>
-                        <p class="text-gray-600 mb-2">Physics Mentor</p>
-                        <button class="bg-yellow-400 text-black px-3 py-1 rounded view-profile">View Profile</button>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl flex-none w-[80%] sm:w-[45%] md:w-[30%] snap-start flex flex-col items-center text-center shadow-md hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
-                        <img src="tutor2.jpg" class="w-32 h-32 rounded-full mb-4">
-                        <h3 class="font-semibold text-lg mb-1">Mr. Kamal</h3>
-                        <p class="text-gray-600 mb-2">Physics Mentor</p>
-                        <button class="bg-yellow-400 text-black px-3 py-1 rounded view-profile">View Profile</button>
-                    </div>
-                </div>
-                <button id="phys-next" class="absolute right-0 sm:right-2 z-10 bg-black/30 hover:bg-black/50 text-white text-2xl rounded-full p-3 sm:p-4">&#10095;</button>
-            </div>
-        </div>
-
-        <!-- COMPUTER SCIENCE -->
-        <div>
-            <h2 class="text-3xl font-bold text-center mb-12">Computer Science Tutors</h2>
-            <div class="relative flex items-center">
-                <button id="cs-prev" class="absolute left-0 sm:left-2 z-10 bg-black/30 hover:bg-black/50 text-white text-2xl rounded-full p-3 sm:p-4">&#10094;</button>
-                <div id="cs-container" class="flex gap-4 sm:gap-6 overflow-x-auto w-full snap-x snap-mandatory scroll-pl-4 sm:scroll-pl-6 scrollbar-hide justify-center">
-                    <div class="bg-white p-6 rounded-xl flex-none w-[80%] sm:w-[45%] md:w-[30%] snap-start flex flex-col items-center text-center shadow-md hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
-                        <img src="tutor1.jpg" class="w-32 h-32 rounded-full mb-4">
-                        <h3 class="font-semibold text-lg mb-1">Dr. Aysel</h3>
-                        <p class="text-gray-600 mb-2">CS Mentor</p>
-                        <button class="bg-yellow-400 text-black px-3 py-1 rounded view-profile">View Profile</button>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl flex-none w-[80%] sm:w-[45%] md:w-[30%] snap-start flex flex-col items-center text-center shadow-md hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
-                        <img src="tutor2.jpg" class="w-32 h-32 rounded-full mb-4">
-                        <h3 class="font-semibold text-lg mb-1">Mr. Kamal</h3>
-                        <p class="text-gray-600 mb-2">CS Mentor</p>
-                        <button class="bg-yellow-400 text-black px-3 py-1 rounded view-profile">View Profile</button>
-                    </div>
-                </div>
-                <button id="cs-next" class="absolute right-0 sm:right-2 z-10 bg-black/30 hover:bg-black/50 text-white text-2xl rounded-full p-3 sm:p-4">&#10095;</button>
-            </div>
-        </div>
-
-        <!-- MATH -->
-        <div>
-            <h2 class="text-3xl font-bold text-center mb-12">Math Tutors</h2>
-            <div class="relative flex items-center">
-                <button id="math-prev" class="absolute left-0 sm:left-2 z-10 bg-black/30 hover:bg-black/50 text-white text-2xl rounded-full p-3 sm:p-4">&#10094;</button>
-                <div id="math-container" class="flex gap-4 sm:gap-6 overflow-x-auto w-full snap-x snap-mandatory scroll-pl-4 sm:scroll-pl-6 scrollbar-hide justify-center">
-                    <div class="bg-white p-6 rounded-xl flex-none w-[80%] sm:w-[45%] md:w-[30%] snap-start flex flex-col items-center text-center shadow-md hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
-                        <img src="tutor1.jpg" class="w-32 h-32 rounded-full mb-4">
-                        <h3 class="font-semibold text-lg mb-1">Dr. Aysel</h3>
-                        <p class="text-gray-600 mb-2">Math Mentor</p>
-                        <button class="bg-yellow-400 text-black px-3 py-1 rounded view-profile">View Profile</button>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl flex-none w-[80%] sm:w-[45%] md:w-[30%] snap-start flex flex-col items-center text-center shadow-md hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
-                        <img src="tutor2.jpg" class="w-32 h-32 rounded-full mb-4">
-                        <h3 class="font-semibold text-lg mb-1">Mr. Kamal</h3>
-                        <p class="text-gray-600 mb-2">Math Mentor</p>
-                        <button class="bg-yellow-400 text-black px-3 py-1 rounded view-profile">View Profile</button>
-                    </div>
-                </div>
-                <button id="math-next" class="absolute right-0 sm:right-2 z-10 bg-black/30 hover:bg-black/50 text-white text-2xl rounded-full p-3 sm:p-4">&#10095;</button>
-            </div>
-        </div>
-
-        <!-- ENGLISH -->
-        <div>
-            <h2 class="text-3xl font-bold text-center mb-12">English Tutors</h2>
-            <div class="relative flex items-center">
-                <button id="eng-prev" class="absolute left-0 sm:left-2 z-10 bg-black/30 hover:bg-black/50 text-white text-2xl rounded-full p-3 sm:p-4">&#10094;</button>
-                <div id="eng-container" class="flex gap-4 sm:gap-6 overflow-x-auto w-full snap-x snap-mandatory scroll-pl-4 sm:scroll-pl-6 scrollbar-hide justify-center">
-                    <div class="bg-white p-6 rounded-xl flex-none w-[80%] sm:w-[45%] md:w-[30%] snap-start flex flex-col items-center text-center shadow-md hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
-                        <img src="tutor1.jpg" class="w-32 h-32 rounded-full mb-4">
-                        <h3 class="font-semibold text-lg mb-1">Dr. Aysel</h3>
-                        <p class="text-gray-600 mb-2">English Mentor</p>
-                        <button class="bg-yellow-400 text-black px-3 py-1 rounded view-profile">View Profile</button>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl flex-none w-[80%] sm:w-[45%] md:w-[30%] snap-start flex flex-col items-center text-center shadow-md hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
-                        <img src="tutor2.jpg" class="w-32 h-32 rounded-full mb-4">
-                        <h3 class="font-semibold text-lg mb-1">Mr. Kamal</h3>
-                        <p class="text-gray-600 mb-2">English Mentor</p>
-                        <button class="bg-yellow-400 text-black px-3 py-1 rounded view-profile">View Profile</button>
-                    </div>
-                </div>
-                <button id="eng-next" class="absolute right-0 sm:right-2 z-10 bg-black/30 hover:bg-black/50 text-white text-2xl rounded-full p-3 sm:p-4">&#10095;</button>
-            </div>
-        </div>
-
+        <!-- Right arrow -->
+        <button id="chem-next"
+                class="absolute right-0 md:right-[-2rem] top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 text-3xl md:text-4xl rounded-full p-3 md:p-4 z-20 shadow-lg transition-transform duration-200 hover:scale-110">
+            &#10095;
+        </button>
     </div>
 </section>
 
-<style>
-    .scrollbar-hide::-webkit-scrollbar { display: none; }
-    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
-</style>
-
 <script>
-    function setupScroll(containerId, prevId, nextId) {
-        const container = document.getElementById(containerId);
-        const prev = document.getElementById(prevId);
-        const next = document.getElementById(nextId);
-        let index = 0;
+    const tutorContainer = document.getElementById('tutor-container');
+    const tutorPrev = document.getElementById('chem-prev');
+    const tutorNext = document.getElementById('chem-next');
 
-        const getCardWidth = () => container.children[0].getBoundingClientRect().width;
-        const getGap = () => parseInt(getComputedStyle(container).gap);
+    let tutorIndex = 0;
 
-        const scroll = () => container.scrollTo({left: index*(getCardWidth()+getGap()), behavior: 'smooth'});
-
-        next.addEventListener('click', () => {
-            index++;
-            if(index > container.children.length - Math.floor(container.offsetWidth / getCardWidth())) index = 0;
-            scroll();
-        });
-
-        prev.addEventListener('click', () => {
-            index--;
-            if(index < 0) index = container.children.length - Math.floor(container.offsetWidth / getCardWidth());
-            scroll();
-        });
+    // Determine visible cards based on screen width
+    function getVisibleTutors() {
+        if (window.innerWidth < 640) return 1;      // mobile
+        if (window.innerWidth < 1024) return 2;     // tablet
+        return 3;                                   // desktop
     }
 
-    // Initialize all sliders
-    ['uni','chem','phys','cs','math','eng'].forEach(id => setupScroll(`${id}-container`, `${id}-prev`, `${id}-next`));
+    function scrollTutors() {
+        const visibleTutors = getVisibleTutors();
+        const card = tutorContainer.children[0];
+        const gap = parseInt(getComputedStyle(tutorContainer).gap);
+        const cardWidth = card.getBoundingClientRect().width + gap;
+
+        // clamp index
+        if (tutorIndex < 0) tutorIndex = tutorContainer.children.length - visibleTutors;
+        if (tutorIndex > tutorContainer.children.length - visibleTutors) tutorIndex = 0;
+
+        tutorContainer.scrollTo({left: tutorIndex * cardWidth, behavior: 'smooth'});
+    }
+
+    // Event listeners
+    tutorNext.addEventListener('click', () => { tutorIndex++; scrollTutors(); });
+    tutorPrev.addEventListener('click', () => { tutorIndex--; scrollTutors(); });
+
+    // Reset scroll on resize
+    window.addEventListener('resize', () => scrollTutors());
+    window.addEventListener('load', () => scrollTutors());
+</script>
+
+<section class="bg-gray-100 py-20 relative">
+    <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">Physics Tutors</h2>
+
+    <div class="max-w-6xl mx-auto flex items-center relative">
+
+        <!-- Left arrow -->
+        <button id="phy-prev"
+                class="absolute left-0 md:left-[-2rem] top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 text-3xl md:text-4xl rounded-full p-3 md:p-4 z-20 shadow-lg transition-transform duration-200 hover:scale-110">
+            &#10094;
+        </button>
+
+        <!-- Tutors container -->
+        <div id="phy-container" class="flex gap-4 sm:gap-6 md:gap-8 overflow-x-auto w-full px-2 sm:px-4 md:px-0 snap-x snap-mandatory scrollbar-hide">
+            <!-- Tutor Card Template -->
+            <div class="bg-white p-6 rounded-lg flex-none w-full sm:w-[45%] md:w-[calc(33.333%-16px)] flex flex-col items-center text-center snap-center">
+                <img src="tutor1.png" alt="Tutor 1" class="w-32 h-32 rounded-full mb-4">
+                <h3 class="font-semibold text-lg mb-1 text-gray-900">Mr. Nariman</h3>
+                <p class="text-gray-900 mb-2">AP Chemistry & Physics Mentor</p>
+                <a href="#"
+                   class="bg-yellow-400 text-black px-3 py-1 rounded tutor-btn"
+                   data-name="Mr. Nariman"
+                   data-subjects="AP Chemistry & Physics"
+                   data-img="tutor1.png"
+                   data-bio="Dr. Aysel is an experienced mentor helping students excel in AP Chemistry and Physics. Loves interactive learning and chemistry experiments.">
+                    View Profile
+                </a>
+            </div>
+            <div class="bg-white p-6 rounded-lg flex-none w-full sm:w-[45%] md:w-[calc(33.333%-16px)] flex flex-col items-center text-center snap-center">
+                <img src="tutor1.png" alt="Tutor 1" class="w-32 h-32 rounded-full mb-4">
+                <h3 class="font-semibold text-lg mb-1 text-gray-900">Mr. Nariman</h3>
+                <p class="text-gray-900 mb-2">AP Chemistry & Physics Mentor</p>
+                <a href="#"
+                   class="bg-yellow-400 text-black px-3 py-1 rounded tutor-btn"
+                   data-name="Mr. Nariman"
+                   data-subjects="AP Chemistry & Physics"
+                   data-img="tutor1.png"
+                   data-bio="Dr. Aysel is an experienced mentor helping students excel in AP Chemistry and Physics. Loves interactive learning and chemistry experiments.">
+                    View Profile
+                </a>
+            </div>
+            <div class="bg-white p-6 rounded-lg flex-none w-full sm:w-[45%] md:w-[calc(33.333%-16px)] flex flex-col items-center text-center snap-center">
+                <img src="tutor1.png" alt="Tutor 1" class="w-32 h-32 rounded-full mb-4">
+                <h3 class="font-semibold text-lg mb-1 text-gray-900">Mr. Nariman</h3>
+                <p class="text-gray-900 mb-2">AP Chemistry & Physics Mentor</p>
+                <a href="#"
+                   class="bg-yellow-400 text-black px-3 py-1 rounded tutor-btn"
+                   data-name="Mr. Nariman"
+                   data-subjects="AP Chemistry & Physics"
+                   data-img="tutor1.png"
+                   data-bio="Dr. Aysel is an experienced mentor helping students excel in AP Chemistry and Physics. Loves interactive learning and chemistry experiments.">
+                    View Profile
+                </a>
+            </div>
+            <!-- Duplicate this card for others -->
+        </div>
+
+        <!-- Right arrow -->
+        <button id="phy-next"
+                class="absolute right-0 md:right-[-2rem] top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 text-3xl md:text-4xl rounded-full p-3 md:p-4 z-20 shadow-lg transition-transform duration-200 hover:scale-110">
+            &#10095;
+        </button>
+    </div>
+</section>
+
+<script>
+    const tutorContainer = document.getElementById('phy-container');
+    const tutorPrev = document.getElementById('phy-prev');
+    const tutorNext = document.getElementById('phy-next');
+
+    let tutorIndex = 0;
+
+    // Determine visible cards based on screen width
+    function getVisibleTutors() {
+        if (window.innerWidth < 640) return 1;      // mobile
+        if (window.innerWidth < 1024) return 2;     // tablet
+        return 3;                                   // desktop
+    }
+
+    function scrollTutors() {
+        const visibleTutors = getVisibleTutors();
+        const card = tutorContainer.children[0];
+        const gap = parseInt(getComputedStyle(tutorContainer).gap);
+        const cardWidth = card.getBoundingClientRect().width + gap;
+
+        // clamp index
+        if (tutorIndex < 0) tutorIndex = tutorContainer.children.length - visibleTutors;
+        if (tutorIndex > tutorContainer.children.length - visibleTutors) tutorIndex = 0;
+
+        tutorContainer.scrollTo({left: tutorIndex * cardWidth, behavior: 'smooth'});
+    }
+
+    // Event listeners
+    tutorNext.addEventListener('click', () => { tutorIndex++; scrollTutors(); });
+    tutorPrev.addEventListener('click', () => { tutorIndex--; scrollTutors(); });
+
+    // Reset scroll on resize
+    window.addEventListener('resize', () => scrollTutors());
+    window.addEventListener('load', () => scrollTutors());
 </script>
 
 <footer class="bg-gray-700 text-gray-300 py-10 ">
