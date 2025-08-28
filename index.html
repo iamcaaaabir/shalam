@@ -236,23 +236,23 @@
         </button>
 
         <!-- Testimonials container -->
-        <div id="testimonial-container" class="flex gap-4 md:gap-8 overflow-x-auto scrollbar-hide snap-x snap-mandatory w-full">
+        <div id="testimonial-container" class="flex gap-4 md:gap-8 overflow-x-auto scrollbar-hide snap-x snap-mandatory w-full px-2 md:px-0">
             <!-- Card 1 -->
-            <div class="bg-white p-6 rounded-xl flex-none w-[80%] sm:w-[60%] md:w-[calc(50%-16px)] flex flex-col items-center text-center snap-center">
+            <div class="bg-white p-6 rounded-xl flex-none w-full sm:w-[60%] md:w-[calc(50%-16px)] flex flex-col items-center text-center snap-center">
                 <img src="student1.jpg" alt="Student 1" class="w-24 h-24 rounded-full mb-4">
                 <h3 class="font-semibold text-lg mb-2">Jabir</h3>
                 <p class="text-gray-600">Thanks to Study Abroad, I prepared for my exams efficiently and got selected for my dream university.</p>
             </div>
 
             <!-- Card 2 -->
-            <div class="bg-white p-6 rounded-xl flex-none w-[80%] sm:w-[60%] md:w-[calc(50%-16px)] flex flex-col items-center text-center snap-center">
+            <div class="bg-white p-6 rounded-xl flex-none w-full sm:w-[60%] md:w-[calc(50%-16px)] flex flex-col items-center text-center snap-center">
                 <img src="student2.jpg" alt="Student 2" class="w-24 h-24 rounded-full mb-4">
                 <h3 class="font-semibold text-lg mb-2">Aysel</h3>
                 <p class="text-gray-600">The mentors guided me through every step, making international study seem achievable and fun.</p>
             </div>
 
             <!-- Card 3 -->
-            <div class="bg-white p-6 rounded-xl flex-none w-[80%] sm:w-[60%] md:w-[calc(50%-16px)] flex flex-col items-center text-center snap-center">
+            <div class="bg-white p-6 rounded-xl flex-none w-full sm:w-[60%] md:w-[calc(50%-16px)] flex flex-col items-center text-center snap-center">
                 <img src="student3.jpg" alt="Student 3" class="w-24 h-24 rounded-full mb-4">
                 <h3 class="font-semibold text-lg mb-2">Elvin</h3>
                 <p class="text-gray-600">I gained confidence and skills that helped me excel in international exams and interviews.</p>
@@ -283,13 +283,18 @@ function scrollCards(steps = 1) {
     if(scrollIndex < 0) scrollIndex = container.children.length - 1;
     if(scrollIndex > container.children.length - 1) scrollIndex = 0;
 
+    // snap exactly to card left edge
     container.scrollTo({left: scrollIndex * cardWidth, behavior: 'smooth'});
 }
+
+// start with first card fully visible on mobile
+window.addEventListener('load', () => {
+    container.scrollTo({left: 0, behavior: 'auto'});
+});
 
 next.addEventListener('click', () => scrollCards(1));
 prev.addEventListener('click', () => scrollCards(-1));
 </script>
-
 
 <!-- Our Tutors Slider Section -->
 <section class="bg-gray-900 py-20">
