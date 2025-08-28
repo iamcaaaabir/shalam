@@ -20,7 +20,7 @@
 
         <!-- Desktop links -->
         <div class="hidden md:flex items-center space-x-3">
-            <a href="#" class="px-3 py-1 rounded hover:bg-yellow-400 transition">Home</a>
+            <a href="index.html" class="px-3 py-1 rounded hover:bg-yellow-400 transition">Home</a>
             <a href="course.html" class="px-3 py-1 rounded bg-yellow-400 transition">Courses</a>
             <a href="teachers.html" class="px-3 py-1 rounded hover:bg-yellow-400 transition">Tutors & Mentors</a>
             <input type="text" placeholder="Search..." class="w-60 border border-gray-300 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400">
@@ -39,13 +39,20 @@
 
     <!-- Mobile menu -->
     <div id="mobile-menu" class="hidden md:hidden px-4 pt-4 pb-3 space-y-2 bg-white">
-        <a href="#" class="block px-3 py-2 rounded hover:bg-yellow-400 text-center transition">Home</a>
+        <a href="index.html" class="block px-3 py-2 rounded hover:bg-yellow-400 text-center transition">Home</a>
         <a href="course.html" class="block px-3 py-2 rounded bg-yellow-400 text-center transition">Courses</a>
         <a href="teachers.html" class="block px-3 py-2 rounded hover:bg-yellow-400 text-center transition">Tutors & Mentors</a>
         <input type="text" placeholder="Search..." class="w-full border border-gray-300 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400">
         <a href="#" class="block px-3 py-2 bg-yellow-400 text-black rounded hover:bg-yellow-500 text-center transition">Sign Up</a>
     </div>
 </nav>
+<script>
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+</script>
 
 <!-- Sub Navbar -->
 <nav class="bg-white shadow-sm sticky top-0 z-40 overflow-x-auto scrollbar-hide">
