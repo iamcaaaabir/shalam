@@ -11,27 +11,44 @@
 <!-- Navbar (reuse from index.html) -->
 <nav class="bg-white shadow-md">
     <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-        <div class="flex items-center space-x-6">
-            <div class="text-xl font-bold">JBR</div>
-            <a href="index.html"
-               class="bg-white text-black px-3 py-1 rounded hover:bg-yellow-500 transition">Home</a>
-            <a href="course.html"
-               class="bg-white text-black px-3 py-1 rounded hover:bg-yellow-500 transition">Courses</a>
-            <a href="#" class="bg-yellow-400 text-black px-3 py-1 rounded hover:bg-yellow-500 transition">Tutors &
-                Mentors</a>
+        <div class="text-xl font-bold">JBR</div>
+
+        <!-- Desktop links -->
+        <div class="hidden md:flex items-center space-x-3">
+            <a href="index.html" class="px-3 py-1 rounded hover:bg-yellow-400 transition">Home</a>
+            <a href="course.html" class="px-3 py-1 rounded bg-yellow-400 transition">Courses</a>
+            <a href="teachers.html" class="px-3 py-1 rounded hover:bg-yellow-400 transition">Tutors & Mentors</a>
+            <input type="text" placeholder="Search..." class="w-60 border border-gray-300 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+            <a href="#" class="px-4 py-2 bg-yellow-400 text-black rounded hover:bg-yellow-500 transition">Sign Up</a>
         </div>
-        <!-- Right side -->
-        <div class="flex items-center space-x-4">
-            <input
-                    type="text"
-                    placeholder="Search..."
-                    class="w-60 border border-gray-300 rounded-full px-4 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 transition"
-            >
-            <a href="#" class="bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-500 transition">Sign Up</a>
+
+        <!-- Mobile button -->
+        <div class="md:hidden">
+            <button id="mobile-menu-btn" class="text-gray-900 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/>
+                </svg>
+            </button>
         </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 pt-4 pb-3 space-y-2 bg-white">
+        <a href="index.html" class="block px-3 py-2 rounded hover:bg-yellow-400 text-center transition">Home</a>
+        <a href="course.html" class="block px-3 py-2 rounded bg-yellow-400 text-center transition">Courses</a>
+        <a href="teachers.html" class="block px-3 py-2 rounded hover:bg-yellow-400 text-center transition">Tutors & Mentors</a>
+        <input type="text" placeholder="Search..." class="w-full border border-gray-300 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+        <a href="#" class="block px-3 py-2 bg-yellow-400 text-black rounded hover:bg-yellow-500 text-center transition">Sign Up</a>
     </div>
 </nav>
 
+<script>
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+</script>
 <!-- Overview Section -->
 <section class="bg-gradient-to-r from-gray-800 to-gray-700 text-white text-center py-20">
     <h1 class="text-4xl font-bold mb-4">Find the Right Tutor or Mentor</h1>
