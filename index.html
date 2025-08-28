@@ -297,22 +297,21 @@ prev.addEventListener('click', () => scrollCards(-1));
 </script>
 
 <!-- Our Tutors Slider Section -->
-<section class="bg-gray-900 py-20">
+<section class="bg-gray-900 py-20 relative">
     <h2 class="text-3xl font-bold text-center mb-12 text-gray-100">Meet Our Tutors</h2>
 
-    <div class="max-w-6xl mx-auto relative flex items-center">
+    <div class="max-w-6xl mx-auto flex items-center relative">
 
         <!-- Left arrow -->
         <button id="tutor-prev"
-                class="absolute left-[-20px] z-10 bg-gray-200 rounded-full p-3 hover:bg-gray-300 text-xl">
-            &#8592;
+                class="absolute left-0 md:left-[-2rem] top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 text-3xl md:text-4xl rounded-full p-3 md:p-4 z-20 shadow-lg transition-transform duration-200 hover:scale-110">
+            &#10094;
         </button>
 
         <!-- Tutors container -->
-        <div id="tutor-container" class="flex gap-8 overflow-hidden w-full rounded-xl">
-
-            <!-- Tutor Card 1 -->
-            <div class="bg-gray-800 p-6 rounded-lg flex-none w-[calc(33.333%-16px)] flex flex-col items-center text-center">
+        <div id="tutor-container" class="flex gap-4 sm:gap-6 md:gap-8 overflow-x-auto w-full px-2 sm:px-4 md:px-0 snap-x snap-mandatory scrollbar-hide">
+            <!-- Tutor Card Template -->
+            <div class="bg-gray-800 p-6 rounded-lg flex-none w-full sm:w-[45%] md:w-[calc(33.333%-16px)] flex flex-col items-center text-center snap-center">
                 <img src="tutor1.png" alt="Tutor 1" class="w-32 h-32 rounded-full mb-4">
                 <h3 class="font-semibold text-lg mb-1 text-gray-50">Mr. Nariman</h3>
                 <p class="text-gray-50 mb-2">AP Chemistry & Physics Mentor</p>
@@ -325,9 +324,7 @@ prev.addEventListener('click', () => scrollCards(-1));
                     View Profile
                 </a>
             </div>
-
-            <!-- Tutor Card 2 -->
-            <div class="bg-gray-800 p-6 rounded-lg flex-none w-[calc(33.333%-16px)] flex flex-col items-center text-center">
+            <div class="bg-gray-800 p-6 rounded-lg flex-none w-full sm:w-[45%] md:w-[calc(33.333%-16px)] flex flex-col items-center text-center snap-center">
                 <img src="tutor1.png" alt="Tutor 1" class="w-32 h-32 rounded-full mb-4">
                 <h3 class="font-semibold text-lg mb-1 text-gray-50">Mr. Nariman</h3>
                 <p class="text-gray-50 mb-2">AP Chemistry & Physics Mentor</p>
@@ -340,9 +337,7 @@ prev.addEventListener('click', () => scrollCards(-1));
                     View Profile
                 </a>
             </div>
-
-            <!-- Tutor Card 3 -->
-            <div class="bg-gray-800 p-6 rounded-lg flex-none w-[calc(33.333%-16px)] flex flex-col items-center text-center">
+            <div class="bg-gray-800 p-6 rounded-lg flex-none w-full sm:w-[45%] md:w-[calc(33.333%-16px)] flex flex-col items-center text-center snap-center">
                 <img src="tutor1.png" alt="Tutor 1" class="w-32 h-32 rounded-full mb-4">
                 <h3 class="font-semibold text-lg mb-1 text-gray-50">Mr. Nariman</h3>
                 <p class="text-gray-50 mb-2">AP Chemistry & Physics Mentor</p>
@@ -355,9 +350,7 @@ prev.addEventListener('click', () => scrollCards(-1));
                     View Profile
                 </a>
             </div>
-
-            <!-- Tutor Card 4 -->
-            <div class="bg-gray-800 p-6 rounded-lg flex-none w-[calc(33.333%-16px)] flex flex-col items-center text-center">
+            <div class="bg-gray-800 p-6 rounded-lg flex-none w-full sm:w-[45%] md:w-[calc(33.333%-16px)] flex flex-col items-center text-center snap-center">
                 <img src="tutor1.png" alt="Tutor 1" class="w-32 h-32 rounded-full mb-4">
                 <h3 class="font-semibold text-lg mb-1 text-gray-50">Mr. Nariman</h3>
                 <p class="text-gray-50 mb-2">AP Chemistry & Physics Mentor</p>
@@ -370,9 +363,7 @@ prev.addEventListener('click', () => scrollCards(-1));
                     View Profile
                 </a>
             </div>
-
-            <!-- Tutor Card 5 -->
-            <div class="bg-gray-800 p-6 rounded-lg flex-none w-[calc(33.333%-16px)] flex flex-col items-center text-center">
+            <div class="bg-gray-800 p-6 rounded-lg flex-none w-full sm:w-[45%] md:w-[calc(33.333%-16px)] flex flex-col items-center text-center snap-center">
                 <img src="tutor1.png" alt="Tutor 1" class="w-32 h-32 rounded-full mb-4">
                 <h3 class="font-semibold text-lg mb-1 text-gray-50">Mr. Nariman</h3>
                 <p class="text-gray-50 mb-2">AP Chemistry & Physics Mentor</p>
@@ -385,9 +376,7 @@ prev.addEventListener('click', () => scrollCards(-1));
                     View Profile
                 </a>
             </div>
-
-            <!-- Tutor Card 6 -->
-            <div class="bg-gray-800 p-6 rounded-lg flex-none w-[calc(33.333%-16px)] flex flex-col items-center text-center">
+            <div class="bg-gray-800 p-6 rounded-lg flex-none w-full sm:w-[45%] md:w-[calc(33.333%-16px)] flex flex-col items-center text-center snap-center">
                 <img src="tutor1.png" alt="Tutor 1" class="w-32 h-32 rounded-full mb-4">
                 <h3 class="font-semibold text-lg mb-1 text-gray-50">Mr. Nariman</h3>
                 <p class="text-gray-50 mb-2">AP Chemistry & Physics Mentor</p>
@@ -400,13 +389,13 @@ prev.addEventListener('click', () => scrollCards(-1));
                     View Profile
                 </a>
             </div>
-
+            <!-- Duplicate this card for others -->
         </div>
 
         <!-- Right arrow -->
         <button id="tutor-next"
-                class="absolute right-[-20px] z-10 bg-gray-200 rounded-full p-3 hover:bg-gray-300 text-xl">
-            &#8594;
+                class="absolute right-0 md:right-[-2rem] top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 text-3xl md:text-4xl rounded-full p-3 md:p-4 z-20 shadow-lg transition-transform duration-200 hover:scale-110">
+            &#10095;
         </button>
     </div>
 </section>
@@ -417,31 +406,34 @@ prev.addEventListener('click', () => scrollCards(-1));
     const tutorNext = document.getElementById('tutor-next');
 
     let tutorIndex = 0;
-    const visibleTutors = 3;
 
-    function scrollTutors() {
-        const gap = parseInt(getComputedStyle(tutorContainer).gap); // get actual gap
-        const cardWidth = tutorContainer.children[0].getBoundingClientRect().width;
-        const scrollAmount = (cardWidth + gap) * tutorIndex;
-        tutorContainer.scrollTo({left: scrollAmount, behavior: 'smooth'});
+    // Determine visible cards based on screen width
+    function getVisibleTutors() {
+        if (window.innerWidth < 640) return 1;      // mobile
+        if (window.innerWidth < 1024) return 2;     // tablet
+        return 3;                                   // desktop
     }
 
-    tutorNext.addEventListener('click', () => {
-        tutorIndex++;
-        if (tutorIndex > tutorContainer.children.length - visibleTutors) tutorIndex = 0;
-        scrollTutors();
-    });
+    function scrollTutors() {
+        const visibleTutors = getVisibleTutors();
+        const card = tutorContainer.children[0];
+        const gap = parseInt(getComputedStyle(tutorContainer).gap);
+        const cardWidth = card.getBoundingClientRect().width + gap;
 
-    tutorPrev.addEventListener('click', () => {
-        tutorIndex--;
+        // clamp index
         if (tutorIndex < 0) tutorIndex = tutorContainer.children.length - visibleTutors;
-        scrollTutors();
-    });
+        if (tutorIndex > tutorContainer.children.length - visibleTutors) tutorIndex = 0;
 
-    // Recalculate on window resize
-    window.addEventListener('resize', () => {
-        scrollTutors();
-    });
+        tutorContainer.scrollTo({left: tutorIndex * cardWidth, behavior: 'smooth'});
+    }
+
+    // Event listeners
+    tutorNext.addEventListener('click', () => { tutorIndex++; scrollTutors(); });
+    tutorPrev.addEventListener('click', () => { tutorIndex--; scrollTutors(); });
+
+    // Reset scroll on resize
+    window.addEventListener('resize', () => scrollTutors());
+    window.addEventListener('load', () => scrollTutors());
 </script>
 
 <!-- News & Updates Section -->
