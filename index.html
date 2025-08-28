@@ -226,75 +226,66 @@
 </section>
 
 <!-- Testimonials Section -->
-<section class="bg-gray-100 py-20">
+<section class="bg-gray-100 py-20 relative">
     <h2 class="text-3xl font-bold text-center mb-12">What Our Students Say</h2>
 
-    <div class="max-w-6xl mx-auto relative flex items-center">
+    <div class="max-w-6xl mx-auto flex items-center relative">
 
         <!-- Left arrow -->
-        <button id="prev" class="absolute left-[-20px] z-10 bg-gray-200 rounded-full p-3 hover:bg-gray-300 text-xl">
-            &#8592;
+        <button id="prev" class="hidden md:flex absolute left-[-3rem] top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-4xl rounded-full p-4 z-20 shadow-lg transition-transform duration-200 hover:scale-110">
+            &#10094;
         </button>
 
         <!-- Testimonials container -->
-        <div id="testimonial-container" class="flex gap-8 overflow-hidden w-full">
-            <!-- Card 1 -->
-            <div class="bg-white p-6 rounded-xl flex-none w-[calc(50%-16px)] flex flex-col items-center text-center">
+        <div id="testimonial-container" class="flex gap-8 overflow-x-auto scrollbar-hide snap-x snap-mandatory">
+            <!-- Card example -->
+            <div class="bg-white p-6 rounded-xl flex-none w-[calc(50%-16px)] md:w-[calc(50%-16px)] flex flex-col items-center text-center snap-center">
                 <img src="student1.jpg" alt="Student 1" class="w-24 h-24 rounded-full mb-4">
                 <h3 class="font-semibold text-lg mb-2">Jabir</h3>
-                <p class="text-gray-600">Thanks to Study Abroad, I prepared for my exams efficiently and got selected
-                    for my dream university.</p>
+                <p class="text-gray-600">Thanks to Study Abroad, I prepared for my exams efficiently and got selected for my dream university.</p>
             </div>
-
-            <!-- Card 2 -->
-            <div class="bg-white p-6 rounded-xl flex-none w-[calc(50%-16px)] flex flex-col items-center text-center">
+            <div class="bg-white p-6 rounded-xl flex-none w-[calc(50%-16px)] md:w-[calc(50%-16px)] flex flex-col items-center text-center snap-center">
                 <img src="student2.jpg" alt="Student 2" class="w-24 h-24 rounded-full mb-4">
                 <h3 class="font-semibold text-lg mb-2">Aysel</h3>
-                <p class="text-gray-600">The mentors guided me through every step, making international study seem
-                    achievable and fun.</p>
+                <p class="text-gray-600">The mentors guided me through every step, making international study seem achievable and fun.</p>
             </div>
-
-            <!-- Card 3 -->
-            <div class="bg-white p-6 rounded-xl shadow-lg flex-none w-[calc(50%-16px)] flex flex-col items-center text-center">
+            <div class="bg-white p-6 rounded-xl flex-none w-[calc(50%-16px)] md:w-[calc(50%-16px)] flex flex-col items-center text-center snap-center">
                 <img src="student3.jpg" alt="Student 3" class="w-24 h-24 rounded-full mb-4">
                 <h3 class="font-semibold text-lg mb-2">Elvin</h3>
-                <p class="text-gray-600">I gained confidence and skills that helped me excel in international exams and
-                    interviews.</p>
+                <p class="text-gray-600">I gained confidence and skills that helped me excel in international exams and interviews.</p>
             </div>
         </div>
 
         <!-- Right arrow -->
-        <button id="next" class="absolute right-[-20px] z-10 bg-gray-200 rounded-full p-3 hover:bg-gray-300 text-xl">
-            &#8594;
+        <button id="next" class="hidden md:flex absolute right-[-3rem] top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-4xl rounded-full p-4 z-20 shadow-lg transition-transform duration-200 hover:scale-110">
+            &#10095;
         </button>
     </div>
 </section>
+
 <script>
     const container = document.getElementById('testimonial-container');
     const prev = document.getElementById('prev');
     const next = document.getElementById('next');
 
     let scrollIndex = 0;
-    const visibleCards = 2; // number of cards visible at once
-    const gap = 32; // Tailwind gap-8
-    const cardWidth = container.children[0].offsetWidth + 32;
 
-    next.addEventListener('click', () => {
-        scrollIndex++;
-        if (scrollIndex > container.children.length - visibleCards) {
-            scrollIndex = 0; // loop back to first
-        }
-        container.scrollTo({left: scrollIndex * cardWidth, behavior: 'smooth'});
-    });
+    function scrollCards(steps = 1) {
+        const card = container.children[0];
+        const cardWidth = card.offsetWidth + 32; // gap-8 = 32px
+        scrollIndex += steps;
 
-    prev.addEventListener('click', () => {
-        scrollIndex--;
-        if (scrollIndex < 0) {
-            scrollIndex = container.children.length - visibleCards; // loop to last set
-        }
+        // clamp scrollIndex
+        if(scrollIndex < 0) scrollIndex = container.children.length - 1;
+        if(scrollIndex > container.children.length - 1) scrollIndex = 0;
+
         container.scrollTo({left: scrollIndex * cardWidth, behavior: 'smooth'});
-    });
+    }
+
+    next.addEventListener('click', () => scrollCards(1));
+    prev.addEventListener('click', () => scrollCards(-1));
 </script>
+
 <!-- Our Tutors Slider Section -->
 <section class="bg-gray-900 py-20">
     <h2 class="text-3xl font-bold text-center mb-12 text-gray-100">Meet Our Tutors</h2>
