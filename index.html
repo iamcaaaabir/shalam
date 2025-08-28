@@ -61,56 +61,45 @@
 <body class="bg-gray-100 text-gray-900">
 <img id="superhero" src="neko-cat.gif" alt="Superhero" class="fixed top-10 left-0 w-32"/>
 <nav class="bg-white shadow-md">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+        <div class="text-xl font-bold">JBR</div>
 
-            <div class="hidden md:flex items-center">
-                <!-- Logo -->
-                <div class="text-xl font-bold mr-4 px-5">JBR</div>
+        <!-- Desktop links -->
+        <div class="hidden md:flex items-center space-x-3">
+            <a href="#" class="px-3 py-1 rounded bg-yellow-400 transition">Home</a>
+            <a href="course.html" class="px-3 py-1 rounded hover:bg-yellow-400 transition">Courses</a>
+            <a href="teachers.html" class="px-3 py-1 rounded hover:bg-yellow-400 transition">Tutors & Mentors</a>
+            <input type="text" placeholder="Search..." class="w-60 border border-gray-300 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+            <a href="#" class="px-4 py-2 bg-yellow-400 text-black rounded hover:bg-yellow-500 transition">Sign Up</a>
+        </div>
 
-                <!-- Links -->
-                <a href="#" class="bg-yellow-400 text-black px-3 py-1 rounded hover:bg-yellow-500 transition mr-3">Home</a>
-                <a href="course.html" class="bg-white text-black px-3 py-1 rounded hover:bg-yellow-500 transition mr-3">Courses</a>
-                <a href="teachers.html" class="bg-white text-black px-3 py-1 rounded hover:bg-yellow-500 transition">Tutors & Mentors</a>
-            </div>
-
-
-            <!-- Right side -->
-            <div class="flex items-center space-x-4">
-                <input type="text" placeholder="Search..." class="hidden md:block w-60 border border-gray-300 rounded-full px-4 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 transition">
-                <a href="#" class="bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-500 transition">Sign Up</a>
-
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden text-2xl focus:outline-none">☰</button>
-            </div>
+        <!-- Mobile button -->
+        <div class="md:hidden">
+            <button id="mobile-menu-btn" class="text-gray-900 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/>
+                </svg>
+            </button>
         </div>
     </div>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden hidden px-4 pt-4 pb-2 space-y-1 bg-white shadow-md">
-        <a href="#" class="block px-3 py-2 rounded hover:bg-yellow-400 hover:text-black transition">Home</a>
-        <a href="course.html" class="block px-3 py-2 rounded hover:bg-yellow-400 hover:text-black transition">Courses</a>
-        <a href="teachers.html" class="block px-3 py-2 rounded hover:bg-yellow-400 hover:text-black transition">Tutors & Mentors</a>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 pt-4 pb-3 space-y-2 bg-white">
+        <a href="#" class="block px-3 py-2 rounded bg-yellow-400 text-center transition">Home</a>
+        <a href="course.html" class="block px-3 py-2 rounded hover:bg-yellow-400 text-center transition">Courses</a>
+        <a href="teachers.html" class="block px-3 py-2 rounded hover:bg-yellow-400 text-center transition">Tutors & Mentors</a>
+        <input type="text" placeholder="Search..." class="w-full border border-gray-300 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+        <a href="#" class="block px-3 py-2 bg-yellow-400 text-black rounded hover:bg-yellow-500 text-center transition">Sign Up</a>
     </div>
 </nav>
 
 <script>
-    const btn = document.getElementById('coursesBtn');
-    const dropdown = document.getElementById('coursesDropdown');
-
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
     btn.addEventListener('click', () => {
-        dropdown.classList.toggle('hidden');
+        menu.classList.toggle('hidden');
     });
-
-    // Close if clicked outside
-    document.addEventListener('click', (e) => {
-        if (!btn.contains(e.target) && !dropdown.contains(e.target)) {
-            dropdown.classList.add('hidden');
-        }
-    });
-</script>
-
-<!-- Hero -->
+</script><!-- Hero -->
 <section class="bg-gradient-to-r from-gray-800 to-gray-700 text-white text-center py-20">
     <h1 class="text-4xl font-bold mb-4" data-aos="fade-up">Want to study abroad?</h1>
     <p class="text-lg mb-6" data-aos="fade-up" data-aos-delay="200">Not sure where to begin?</p>
@@ -121,8 +110,6 @@
     </button>
     </a>
 </section>
-
-
 <!-- Learn More About Courses -->
 <section class="bg-gray-100 py-16">
     <h2 class="text-3xl font-bold text-center mb-12">Learn More About Services</h2>
