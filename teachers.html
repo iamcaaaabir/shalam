@@ -590,9 +590,29 @@
         © 2025 Study Abroad. All rights reserved.
     </div>
 </footer>
+<!-- Modal -->
+<!-- Modal -->
+<div id="tutorModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+    <div id="tutorModalContent" class="bg-white rounded-lg shadow-lg w-full max-w-md p-6 relative modal-hide">
+        <!-- Close button -->
+        <button id="closeTutorModal"
+                class="absolute top-3 right-3 text-gray-700 hover:text-black text-4xl font-extrabold leading-none focus:outline-none">
+            &times;
+        </button>
+
+        <!-- Content -->
+        <div class="flex flex-col items-center text-center">
+            <img id="tutorModalImg" src="" alt="Tutor photo" class="w-32 h-32 rounded-full mb-4">
+            <h3 id="tutorModalName" class="text-xl font-semibold mb-1"></h3>
+            <p id="tutorModalSubjects" class="text-gray-700 mb-2"></p>
+            <p><strong>Age:</strong> <span id="tutorModalAge"></span></p>
+            <p><strong>Experience:</strong> <span id="tutorModalExperience"></span></p>
+            <p id="tutorModalBio" class="mt-4 text-gray-600"></p>
+        </div>
+    </div>
+</div>
 <script>
     const tutorModal = document.getElementById('tutorModal');
-    const tutorModalContent = document.getElementById('tutorModalContent');
     const closeTutorModal = document.getElementById('closeTutorModal');
     const tutorBtns = document.querySelectorAll('.tutor-btn');
 
@@ -603,44 +623,46 @@
     const tutorModalExperience = document.getElementById('tutorModalExperience');
     const tutorModalBio = document.getElementById('tutorModalBio');
 
+    // open modal
     function openModal(btn) {
-        tutorModalImg.src = btn.dataset.img;
-        tutorModalName.textContent = btn.dataset.name;
-        tutorModalSubjects.textContent = btn.dataset.subjects;
-        tutorModalAge.textContent = btn.dataset.age;
-        tutorModalExperience.textContent = btn.dataset.experience;
-        tutorModalBio.textContent = btn.dataset.bio;
+        tutorModalImg.src = btn.dataset.img || "";
+        tutorModalName.textContent = btn.dataset.name || "";
+        tutorModalSubjects.textContent = btn.dataset.subjects || "";
+        tutorModalAge.textContent = btn.dataset.age || "";
+        tutorModalExperience.textContent = btn.dataset.experience || "";
+        tutorModalBio.textContent = btn.dataset.bio || "";
 
         tutorModal.classList.remove('hidden');
-        tutorModalContent.classList.remove('modal-hide');
-        tutorModalContent.classList.add('modal-show');
     }
 
+    // close modal
     function closeModal() {
-        tutorModalContent.classList.remove('modal-show');
-        tutorModalContent.classList.add('modal-hide');
-
-        // Wait for animation to finish
-        tutorModalContent.addEventListener('animationend', () => {
-            tutorModal.classList.add('hidden');
-        }, {once: true});
+        tutorModal.classList.add('hidden');
     }
 
-    // Open modal
+    // open from buttons
     tutorBtns.forEach(btn => {
-        btn.addEventListener('click', (e) => {
+        btn.addEventListener('click', e => {
             e.preventDefault();
             openModal(btn);
         });
     });
 
-    // Close modal
+    // close on X
     closeTutorModal.addEventListener('click', closeModal);
 
-    // Close if clicking outside
-    tutorModal.addEventListener('click', (e) => {
+    // close if clicking outside content
+    tutorModal.addEventListener('click', e => {
         if (e.target === tutorModal) closeModal();
     });
+
+    // optional: close with Escape key
+    document.addEventListener('keydown', e => {
+        if (e.key === "Escape") closeModal();
+    });
 </script>
+
+
+
 </body>
 </html>
